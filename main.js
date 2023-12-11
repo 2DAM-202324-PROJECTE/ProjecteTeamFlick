@@ -3,7 +3,30 @@ import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
 import { Carousel, initTE } from "tw-elements";
+
+// Import your spotlight CSS styles
+import './spotlight.css';
+
+// Initialize tw-elements
 initTE({ Carousel });
+
+// Setup counter
+setupCounter(document.querySelector('#counter'));
+
+document.addEventListener('DOMContentLoaded', function () {
+    const ctaSection = document.querySelector('.cta-section');
+
+    if (ctaSection) {
+        const spotlight = document.createElement('div');
+        spotlight.className = 'spotlight';
+        ctaSection.appendChild(spotlight);
+
+        ctaSection.addEventListener('mousemove', function (e) {
+            spotlight.style.left = e.pageX + 'px';
+            spotlight.style.top = e.pageY + 'px';
+        });
+    }
+});
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -23,4 +46,3 @@ document.querySelector('#app').innerHTML = `
   </div>
 `
 
-setupCounter(document.querySelector('#counter'))
