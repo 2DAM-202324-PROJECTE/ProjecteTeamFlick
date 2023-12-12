@@ -1,3 +1,32 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+:root {
+    --cursor-x: 0;
+    --cursor-y: 0;
+}
+
+.spotlight {
+    position: relative;
+    overflow: hidden;
+}
+
+#spotlightOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(
+            circle at var(--cursor-x) var(--cursor-y),
+            transparent 160px,
+            rgba(0, 0, 0, 0.85) 200px
+    );
+    pointer-events: none;
+    transition: all 0.3s ease; /* Add a smooth transition effect */
+}
+
+.spotlight.active #spotlightOverlay {
+    background-image: radial-gradient(
+            circle at var(--cursor-x) var(--cursor-y),
+            transparent 160px,
+            rgba(0, 0, 0, 0.85) 200px
+    );
+}
