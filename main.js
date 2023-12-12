@@ -4,6 +4,7 @@ window.Alpine = Alpine
 
 Alpine.start()
 
+
 document.addEventListener('DOMContentLoaded', function () {
     const spotlightDiv = document.getElementById('mySpotlightDiv');
 
@@ -16,3 +17,4 @@ document.addEventListener('DOMContentLoaded', function () {
         this.style.setProperty('--cursor-y', `${y}px`);
     });
 });
+
