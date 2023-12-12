@@ -1,18 +1,32 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-
+:root {
+    --cursor-x: 0;
+    --cursor-y: 0;
+}
 
 .spotlight {
+    position: relative;
+    overflow: hidden;
+}
+
+#spotlightOverlay {
     position: absolute;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: radial-gradient(circle, transparent 20%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0) 90%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(
+            circle at var(--cursor-x) var(--cursor-y),
+            transparent 160px,
+            rgba(0, 0, 0, 0.85) 200px
+    );
     pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: width 0.2s, height 0.2s;
-    z-index: 1000;
+    transition: all 0.3s ease; /* Add a smooth transition effect */
+}
+
+.spotlight.active #spotlightOverlay {
+    background-image: radial-gradient(
+            circle at var(--cursor-x) var(--cursor-y),
+            transparent 160px,
+            rgba(0, 0, 0, 0.85) 200px
+    );
 }

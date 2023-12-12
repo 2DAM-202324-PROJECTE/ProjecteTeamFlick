@@ -1,48 +1,18 @@
-import './Originalstyle.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
-import { Carousel, initTE } from "tw-elements";
+import Alpine from 'alpinejs'
 
-// Import your spotlight CSS styles
-import './spotlight.css';
+window.Alpine = Alpine
 
-// Initialize tw-elements
-initTE({ Carousel });
-
-// Setup counter
-setupCounter(document.querySelector('#counter'));
+Alpine.start()
 
 document.addEventListener('DOMContentLoaded', function () {
-    const ctaSection = document.querySelector('.cta-section');
+    const spotlightDiv = document.getElementById('mySpotlightDiv');
 
-    if (ctaSection) {
-        const spotlight = document.createElement('div');
-        spotlight.className = 'spotlight';
-        ctaSection.appendChild(spotlight);
+    spotlightDiv.addEventListener('mousemove', function (e) {
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
 
-        ctaSection.addEventListener('mousemove', function (e) {
-            spotlight.style.left = e.pageX + 'px';
-            spotlight.style.top = e.pageY + 'px';
-        });
-    }
+        this.style.setProperty('--cursor-x', `${x}px`);
+        this.style.setProperty('--cursor-y', `${y}px`);
+    });
 });
-
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
-
