@@ -4,6 +4,12 @@ window.Alpine = Alpine
 
 Alpine.start()
 
+// function toggleFAQ(faqId) {
+//     var element = document.getElementById(faqId);
+//     element.classList.toggle("hidden");
+// }
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const spotlightDiv = document.getElementById('mySpotlightDiv');

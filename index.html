@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="style.css" rel="stylesheet">
     <!-- Enllaç a CSS de Swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
@@ -13,833 +14,1044 @@
     <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
     <title>Vite App</title>
-  </head>
+</head>
 
-  <body>
-  <script type="module" src="/main.js"></script>
-  <!--  HEADER-->
-
-
-<header class="bg-gradient-to-t from-gray-900 from-50% via-blue-450 via-70% to-blue-500 to-90%" x-data="{menuOpen: false}">
-  <nav class="mx-auto flex max-w-10xl items-center justify-between pt-1.5 lg:px-8  " aria-label="Global">
-    <div class="flex lg:flex-1">
-      <a href="#" class="-m-.5 p-.5">
-        <span class="sr-only">TeamFlick</span>
-        <img class="h-20 w-auto pl-4" src="imatges/logo33.png" alt="">
-      </a>
-    </div>
-    <div class="flex lg:hidden ">
-      <button @click="menuOpen=true" type="button"
-              class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400">
-        <span class="sr-only">Open main menu</span>
-        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-             aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-        </svg>
-      </button>
-    </div>
-    <div class="hidden lg:flex lg:gap-x-16 " >
-      <a href="#" class="text-sm font-semibold leading-6 text-white">Producte</a>
-      <a href="#" class="text-sm font-semibold leading-6 text-white">Features</a>
-      <a href="#" class="text-sm font-semibold leading-6 text-white">Marketplace</a>
-      <a href="#" class="text-sm font-semibold leading-6 text-white">Company</a>
-    </div>
-    <div class="hidden lg:flex lg:flex-1 lg:justify-end ">
-      <a href="#" class=" pr-4 text-sm font-semibold leading-6 text-white">Log in <span aria-hidden="true">&rarr;</span></a>
-    </div>
-  </nav>
-  <!-- Mobile menu, show/hide based on menu open state. -->
-  <div x-show="menuOpen" class="lg:hidden" role="dialog" aria-modal="true">
-    <!-- Background backdrop, show/hide based on slide-over state. -->
-    <div class="fixed inset-0 z-10 "></div>
-    <div class="fixed inset-y-0 right-0 z-10 w-full bg-gradient-to-t from-gray-900 via-gray-900 50%, blue-450 50% to-blue-500 overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
+<body>
+<script type="module" src="/main.js"></script>
+<!--  HEADER-->
 
 
-    <div class="flex items-center justify-between">
-        <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">TeamFlick</span>
-          <img class="h-20 w-auto  " src="imatges/logo33.png" alt="">
-        </a>
-        <button @click="menuOpen=false" type="button" class="-m-2.5 rounded-md p-2.5  ">
-          <span class="sr-only">Close menu</span>
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-      <div class="mt-6 flow-root">
-        <div class="-my-6 divide-y divide-gray-500/25">
-          <div class="space-y-2 py-6">
-            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Product</a>
-            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Features</a>
-            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Marketplace</a>
-            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Company</a>
-          </div>
-          <div class="py-6">
-            <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-800">Log in</a>
-          </div>
+<header class="bg-gradient-to-t from-gray-900 from-50% via-blue-450 via-70% to-blue-500 to-90%"
+        x-data="{menuOpen: false}">
+    <nav class="mx-auto flex max-w-10xl items-center justify-between pt-1.5 lg:px-8  " aria-label="Global">
+        <div class="flex lg:flex-1">
+            <a href="#" class="-m-.5 p-.5">
+                <span class="sr-only">TeamFlick</span>
+                <img class="h-20 w-auto pl-4" src="imatges/logo33.png" alt="">
+            </a>
         </div>
-      </div>
+        <div class="flex lg:hidden ">
+            <button @click="menuOpen=true" type="button"
+                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400">
+                <span class="sr-only">Open main menu</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                     aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                </svg>
+            </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-16 ">
+            <a href="#" class="text-sm font-semibold leading-6 text-white">Producte</a>
+            <a href="#" class="text-sm font-semibold leading-6 text-white">Features</a>
+            <a href="#" class="text-sm font-semibold leading-6 text-white">Marketplace</a>
+            <a href="#" class="text-sm font-semibold leading-6 text-white">Company</a>
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end ">
+            <a href="#" class=" pr-4 text-sm font-semibold leading-6 text-white">Log in <span
+                    aria-hidden="true">&rarr;</span></a>
+        </div>
+    </nav>
+    <!-- Mobile menu, show/hide based on menu open state. -->
+    <div x-show="menuOpen" class="lg:hidden" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-10 "></div>
+        <div class="fixed inset-y-0 right-0 z-10 w-full bg-gradient-to-t from-gray-900 via-gray-900 50%, blue-450 50% to-blue-500 overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
+
+
+            <div class="flex items-center justify-between">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">TeamFlick</span>
+                    <img class="h-20 w-auto  " src="imatges/logo33.png" alt="">
+                </a>
+                <button @click="menuOpen=false" type="button" class="-m-2.5 rounded-md p-2.5  ">
+                    <span class="sr-only">Close menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                         aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-gray-500/25">
+                    <div class="space-y-2 py-6">
+                        <a href="#"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Product</a>
+                        <a href="#"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Features</a>
+                        <a href="#"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Marketplace</a>
+                        <a href="#"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Company</a>
+                    </div>
+                    <div class="py-6">
+                        <a href="#"
+                           class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-800">Log
+                            in</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </header>
 
 <!--      FIN HEARDER-->
 
 
-
-  <div class="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32">
+<div class="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
-        <div class="max-w-xl lg:max-w-lg">
-          <h2 class="font-bold tracking-tight text-white text-2xl">SUBSCRIU'TE A TEAMFLICK.</h2>
-          <p class="mt-4 text-base leading-8 text-gray-300">La millor plataforma, mira pel·lícules sempre acompanyat.
-          Posa el teu correu per a que t'enviessem les novetats. </p>
-          <div class="mt-6 flex max-w-md gap-x-4">
-            <label for="email-address" class="sr-only">Email address</label>
-            <input id="email-address" name="email" type="email" autocomplete="email" required="" class="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" placeholder="Introdueix el teu correu" />
-            <button type="submit" class="flex-none rounded-md px-3.5 py-2.5 text-sm font-semibold text-white hover:text-opacity-70 shadow-sm bg-gradient-to-r from-green-600 to-blue-700 hover:from-blue-700 hover:to-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Suscriure's</button>
-          </div>
+        <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
+            <div class="max-w-xl lg:max-w-lg">
+                <h2 class="font-bold tracking-tight text-white text-2xl">SUBSCRIU'TE A TEAMFLICK.</h2>
+                <p class="mt-4 text-base leading-8 text-gray-300">La millor plataforma, mira pel·lícules sempre
+                    acompanyat.
+                    Posa el teu correu per a que t'enviessem les novetats. </p>
+                <div class="mt-6 flex max-w-md gap-x-4">
+                    <label for="email-address" class="sr-only">Email address</label>
+                    <input id="email-address" name="email" type="email" autocomplete="email" required=""
+                           class="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                           placeholder="Introdueix el teu correu"/>
+                    <button type="submit"
+                            class="flex-none rounded-md px-3.5 py-2.5 text-sm font-semibold text-white hover:text-opacity-70 shadow-sm bg-gradient-to-r from-green-600 to-blue-700 hover:from-blue-700 hover:to-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+                        Suscriure's
+                    </button>
+                </div>
+            </div>
+            <dl class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
+                <div class="flex flex-col items-start">
+                    <div class="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
+                        <CalendarDaysIcon class="h-6 w-6 text-white" aria-hidden="true"/>
+                    </div>
+                    <dt class="mt-4 font-semibold text-white">Documentals i pel·lícules clàssiques</dt>
+                    <dd class="mt-2 leading-7 text-gray-400">La teva plataforma amb documentals variats i les millors
+                        pel·lícules clàssiques.
+                    </dd>
+                </div>
+                <div class="flex flex-col items-start">
+                    <div class="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
+                        <HandRaisedIcon class="h-6 w-6 text-white" aria-hidden="true"/>
+                    </div>
+                    <dt class="mt-4 font-semibold text-white">Chateja amb amics</dt>
+                    <dd class="mt-2 leading-7 text-gray-400">Comparteix rises i plors juntament amb els teus amics
+                        veient les millors pel·lícules a la vegada.
+                    </dd>
+                </div>
+            </dl>
         </div>
-        <dl class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
-          <div class="flex flex-col items-start">
-            <div class="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
-              <CalendarDaysIcon class="h-6 w-6 text-white" aria-hidden="true" />
-            </div>
-            <dt class="mt-4 font-semibold text-white">Documentals i pel·lícules clàssiques</dt>
-            <dd class="mt-2 leading-7 text-gray-400">La teva plataforma amb documentals variats i les millors pel·lícules clàssiques.</dd>
-          </div>
-          <div class="flex flex-col items-start">
-            <div class="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
-              <HandRaisedIcon class="h-6 w-6 text-white" aria-hidden="true" />
-            </div>
-            <dt class="mt-4 font-semibold text-white">Chateja amb amics</dt>
-            <dd class="mt-2 leading-7 text-gray-400">Comparteix rises i plors juntament amb els teus amics veient les millors pel·lícules a la vegada.</dd>
-          </div>
-        </dl>
-      </div>
     </div>
     <div class="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6" aria-hidden="true">
-      <div class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" />
+        <div class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+             style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"/>
     </div>
-  </div>
+</div>
 
 
 <script setup>
-  import { CalendarDaysIcon, HandRaisedIcon } from '@heroicons/vue/24/outline'
+    import {CalendarDaysIcon, HandRaisedIcon} from '@heroicons/vue/24/outline'
 </script>
-
 
 
 <!--HERO SECTION Simple three column with large icons on dark-->
 
 <div id="pelis" class="bg-black-900 py-1">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <h1 class="text-5xl font-semibold leading-7 text-white text-center pt-32 pb-12">Pel·lícules</h1>
-    <h2 class="text-2xl font-bold tracking-tight text-white text-center ">TENIM LES MILLORS PEL·LÍCULES CLÀSSIQUES</h2>
-    <p class="mt-6 text-lg leading-8 text-white/80 text-center pb-8">hhhhhhhhhhhhhh</p>
-
-    <div class="max-w-sm mx-auto opacity-80">
-
-      <div id="carrusel-pelis" class="relative" data-carousel="slide" data-carousel-interval="3000">
-
-        <div class="overflow-hidden relative rounded-lg h-96">
-
-          <div class="hidden duration-700 ease-in-out">
-            <div class="bg-gray-300/20 rounded-md p-2 m-4 mx-16">
-            <img src="/imatges/Carnival_of_Souls_(1962_pressbook_cover).jpg" class=" relative left-1/2 w-60 h-80 -translate-x-1/2 rounded" alt="...">
-            </div>
-          </div>
-
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <div class="bg-gray-300/20 rounded-md p-2 m-4 mx-16">
-            <img src="/imatges/Charada-267444105-large.jpg" class="relative top-1/2 left-1/2 w-60 h-80 -translate-x-1/2 rounded" alt="...">
-            </div>
-          </div>
-
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <div class="bg-gray-300/20 rounded-md p-2 my-2 mx-16">
-            <img src="/imatges/Demencia_13-935405486-large.jpg" class="relative top-1/2 left-1/2 w-60 h-80 -translate-x-1/2 rounded" alt="...">
-            </div>
-          </div>
-
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <div class="bg-gray-300/20 rounded-md p-2 m-4 mx-16">
-            <img src="/imatges/Fear_and_desire_Miedo_y_deseo-784547821-large.jpg" class="relative top-1/2 left-1/2 w-60 h-80 -translate-x-1/2 rounded" alt="...">
-            </div>
-          </div>
-
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <div class="bg-gray-300/20 rounded-md p-2 m-4 mx-16">
-            <img src="/imatges/Gold_rush_poster.jpg" class="relative top-1/2 left-1/2 w-60 h-80 -translate-x-1/2 rounded" alt="...">
-            </div>
-          </div>
-
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <div class="bg-gray-300/20 rounded-md p-2 m-4 mx-16">
-            <img src="/imatges/Night_of_the_Living_Dead_(1968)_poster.jpg" class="relative top-1/2 left-1/2 w-60 h-80 -translate-x-1/2 rounded" alt="...">
-            </div>
-          </div>
-
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <div class="bg-gray-300/20 rounded-md p-2 m-4 mx-20">
-            <img src="/imatges/The_general_movie_poster.jpg" class="relative top-1/2 left-1/2 w-56 h-80 -translate-x-1/2 rounded" alt="...">
-            </div>
-          </div>
-
-
-
-        <div class="flex absolute bottom-2 left-1/2 z-30 space-x-3 -translate-x-1/2">
-          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="2"></button>
-          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="2"></button>
-          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 6" data-carousel-slide-to="2"></button>
-          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 7" data-carousel-slide-to="2"></button>
-        </div>
-
-        <button type="button" class="flex hover:animate-pulse absolute top-0 left-0 z-30 justify-center items-center pr-8 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
-            <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30  group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
-                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                <span class="hidden">Anterior</span>
-            </span>
-        </button>
-
-        <button type="button" class="flex hover:animate-pulse absolute top-0 right-0 z-30 justify-center items-center pl-8 h-full cursor-pointer group focus:outline-none" data-carousel-next>
-            <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 0 group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
-                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                <span class="hidden">Siguiente</span>
-            </span>
-        </button>
-
-      </div>
-      </div>
-
-      </p>
-      <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
-    </div>
-
-
-<script type="module" src="main.js"></script>
-
-
-<!-- CARRUSEL DELS DOCUMENTALS-->
-
-
-    <div id="documentals" class="bg-black-900 py-1 lg:py-6 sm:py-6">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div class="absolute inset-0 opacity-50 -z-10 mx-60"></div>
-          <h1 class="text-5xl font-semibold leading-4 text-white text-center pt-24 pb-12">Documentals</h1>
-        <h2 class="text-2xl font-bold tracking-tight text-white text-center">TENIM DOCUMENTALS VARIATS I INTERESSANTS</h2>
-        <p class="mt-6 text-lg leading-8 text-white/80 text-center pb-6">hhhhhhhhhhhhh</p>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h1 class="text-5xl font-semibold leading-7 text-white text-center pt-32 pb-12">Pel·lícules</h1>
+        <h2 class="text-2xl font-bold tracking-tight text-white text-center ">TENIM LES MILLORS PEL·LÍCULES
+            CLÀSSIQUES</h2>
+        <p class="mt-6 text-lg leading-8 text-white/80 text-center pb-8">hhhhhhhhhhhhhh</p>
 
         <div class="max-w-sm mx-auto opacity-80">
 
-          <div id="carrusel-documentals" class="relative" data-carousel="slide" data-carousel-interval="3000">
+            <div id="carrusel-pelis" class="relative" data-carousel="slide" data-carousel-interval="3000">
 
-            <div class="overflow-hidden relative rounded-lg h-96">
+                <div class="overflow-hidden relative rounded-lg h-96">
 
-              <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <div class="bg-gray-300/20 rounded-md p-2 m-4 mx-16">
-                  <img src="/imatges/Carnival_of_Souls_(1962_pressbook_cover).jpg" class=" relative left-1/2 w-60 h-80 -translate-x-1/2 rounded" alt="...">
-                </div>
-              </div>
+                    <div class="hidden duration-700 ease-in-out">
+                        <div class="bg-gray-300/20 rounded-md p-2 m-4 mx-16">
+                            <img src="/imatges/Carnival_of_Souls_(1962_pressbook_cover).jpg"
+                                 class=" relative left-1/2 w-60 h-80 -translate-x-1/2 rounded" alt="...">
+                        </div>
+                    </div>
 
-              <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <div class="bg-gray-300/20 rounded-md p-2 m-4 mx-16">
-                  <img src="/imatges/Charada-267444105-large.jpg" class="relative top-1/2 left-1/2 w-60 h-80 -translate-x-1/2 rounded" alt="...">
-                </div>
-              </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <div class="bg-gray-300/20 rounded-md p-2 m-4 mx-16">
+                            <img src="/imatges/Charada-267444105-large.jpg"
+                                 class="relative top-1/2 left-1/2 w-60 h-80 -translate-x-1/2 rounded" alt="...">
+                        </div>
+                    </div>
 
-              <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <div class="bg-gray-300/20 rounded-md p-2 my-2 mx-16">
-                  <img src="/imatges/Demencia_13-935405486-large.jpg" class="relative top-1/2 left-1/2 w-60 h-80 -translate-x-1/2 rounded" alt="...">
-                </div>
-              </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <div class="bg-gray-300/20 rounded-md p-2 my-2 mx-16">
+                            <img src="/imatges/Demencia_13-935405486-large.jpg"
+                                 class="relative top-1/2 left-1/2 w-60 h-80 -translate-x-1/2 rounded" alt="...">
+                        </div>
+                    </div>
 
-              <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <div class="bg-gray-300/20 rounded-md p-2 m-4 mx-16">
-                  <img src="/imatges/Fear_and_desire_Miedo_y_deseo-784547821-large.jpg" class="relative top-1/2 left-1/2 w-60 h-80 -translate-x-1/2 rounded" alt="...">
-                </div>
-              </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <div class="bg-gray-300/20 rounded-md p-2 m-4 mx-16">
+                            <img src="/imatges/Fear_and_desire_Miedo_y_deseo-784547821-large.jpg"
+                                 class="relative top-1/2 left-1/2 w-60 h-80 -translate-x-1/2 rounded" alt="...">
+                        </div>
+                    </div>
 
-              <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <div class="bg-gray-300/20 rounded-md p-2 m-4 mx-16">
-                  <img src="/imatges/Gold_rush_poster.jpg" class="relative top-1/2 left-1/2 w-60 h-80 -translate-x-1/2 rounded" alt="...">
-                </div>
-              </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <div class="bg-gray-300/20 rounded-md p-2 m-4 mx-16">
+                            <img src="/imatges/Gold_rush_poster.jpg"
+                                 class="relative top-1/2 left-1/2 w-60 h-80 -translate-x-1/2 rounded" alt="...">
+                        </div>
+                    </div>
 
-              <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <div class="bg-gray-300/20 rounded-md p-2 m-4 mx-16">
-                  <img src="/imatges/Night_of_the_Living_Dead_(1968)_poster.jpg" class="relative top-1/2 left-1/2 w-60 h-80 -translate-x-1/2 rounded" alt="...">
-                </div>
-              </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <div class="bg-gray-300/20 rounded-md p-2 m-4 mx-16">
+                            <img src="/imatges/Night_of_the_Living_Dead_(1968)_poster.jpg"
+                                 class="relative top-1/2 left-1/2 w-60 h-80 -translate-x-1/2 rounded" alt="...">
+                        </div>
+                    </div>
 
-              <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <div class="bg-gray-300/20 rounded-md p-2 m-4 mx-20">
-                  <img src="/imatges/The_general_movie_poster.jpg" class="relative top-1/2 left-1/2 w-56 h-80 -translate-x-1/2 rounded" alt="...">
-                </div>
-              </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <div class="bg-gray-300/20 rounded-md p-2 m-4 mx-20">
+                            <img src="/imatges/The_general_movie_poster.jpg"
+                                 class="relative top-1/2 left-1/2 w-56 h-80 -translate-x-1/2 rounded" alt="...">
+                        </div>
+                    </div>
 
 
+                    <div class="flex absolute bottom-2 left-1/2 z-30 space-x-3 -translate-x-1/2">
+                        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1"
+                                data-carousel-slide-to="0"></button>
+                        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                                data-carousel-slide-to="1"></button>
+                        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+                                data-carousel-slide-to="2"></button>
+                        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+                                data-carousel-slide-to="2"></button>
+                        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+                                data-carousel-slide-to="2"></button>
+                        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 6"
+                                data-carousel-slide-to="2"></button>
+                        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 7"
+                                data-carousel-slide-to="2"></button>
+                    </div>
 
-              <div class="flex absolute bottom-2 left-1/2 z-30 space-x-3 -translate-x-1/2">
-                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="2"></button>
-                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="2"></button>
-                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 6" data-carousel-slide-to="2"></button>
-                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 7" data-carousel-slide-to="2"></button>
-              </div>
-
-              <button type="button" class="flex hover:animate-pulse absolute top-0 left-0 z-30 justify-center items-center pr-8 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
+                    <button type="button"
+                            class="flex hover:animate-pulse absolute top-0 left-0 z-30 justify-center items-center pr-8 h-full cursor-pointer group focus:outline-none"
+                            data-carousel-prev>
             <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30  group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
-                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round"
+                                                              stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                 <span class="hidden">Anterior</span>
             </span>
-              </button>
+                    </button>
 
-              <button type="button" class="flex hover:animate-pulse absolute top-0 right-0 z-30 justify-center items-center pl-8 h-full cursor-pointer group focus:outline-none" data-carousel-next>
+                    <button type="button"
+                            class="flex hover:animate-pulse absolute top-0 right-0 z-30 justify-center items-center pl-8 h-full cursor-pointer group focus:outline-none"
+                            data-carousel-next>
             <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 0 group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
-                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round"
+                                                              stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 <span class="hidden">Siguiente</span>
             </span>
-              </button>
-          </div>
-          </div>
+                    </button>
+
+                </div>
+            </div>
+
+            </p>
+            <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
         </div>
-      </div>
+
+
+        <script type="module" src="main.js"></script>
+
+
+        <!-- CARRUSEL DELS DOCUMENTALS-->
+
+
+        <div id="documentals" class="bg-black-900 py-1 lg:py-6 sm:py-6">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="absolute inset-0 opacity-50 -z-10 mx-60"></div>
+                <h1 class="text-5xl font-semibold leading-4 text-white text-center pt-24 pb-12">Documentals</h1>
+                <h2 class="text-2xl font-bold tracking-tight text-white text-center">TENIM DOCUMENTALS VARIATS I
+                    INTERESSANTS</h2>
+                <p class="mt-6 text-lg leading-8 text-white/80 text-center pb-6">hhhhhhhhhhhhh</p>
+
+                <div class="max-w-sm mx-auto opacity-80">
+
+                    <div id="carrusel-documentals" class="relative" data-carousel="slide" data-carousel-interval="3000">
+
+                        <div class="overflow-hidden relative rounded-lg h-96">
+
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <div class="bg-gray-300/20 rounded-md p-2 m-4 mx-16">
+                                    <img src="/imatges/Carnival_of_Souls_(1962_pressbook_cover).jpg"
+                                         class=" relative left-1/2 w-60 h-80 -translate-x-1/2 rounded" alt="...">
+                                </div>
+                            </div>
+
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <div class="bg-gray-300/20 rounded-md p-2 m-4 mx-16">
+                                    <img src="/imatges/Charada-267444105-large.jpg"
+                                         class="relative top-1/2 left-1/2 w-60 h-80 -translate-x-1/2 rounded" alt="...">
+                                </div>
+                            </div>
+
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <div class="bg-gray-300/20 rounded-md p-2 my-2 mx-16">
+                                    <img src="/imatges/Demencia_13-935405486-large.jpg"
+                                         class="relative top-1/2 left-1/2 w-60 h-80 -translate-x-1/2 rounded" alt="...">
+                                </div>
+                            </div>
+
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <div class="bg-gray-300/20 rounded-md p-2 m-4 mx-16">
+                                    <img src="/imatges/Fear_and_desire_Miedo_y_deseo-784547821-large.jpg"
+                                         class="relative top-1/2 left-1/2 w-60 h-80 -translate-x-1/2 rounded" alt="...">
+                                </div>
+                            </div>
+
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <div class="bg-gray-300/20 rounded-md p-2 m-4 mx-16">
+                                    <img src="/imatges/Gold_rush_poster.jpg"
+                                         class="relative top-1/2 left-1/2 w-60 h-80 -translate-x-1/2 rounded" alt="...">
+                                </div>
+                            </div>
+
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <div class="bg-gray-300/20 rounded-md p-2 m-4 mx-16">
+                                    <img src="/imatges/Night_of_the_Living_Dead_(1968)_poster.jpg"
+                                         class="relative top-1/2 left-1/2 w-60 h-80 -translate-x-1/2 rounded" alt="...">
+                                </div>
+                            </div>
+
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <div class="bg-gray-300/20 rounded-md p-2 m-4 mx-20">
+                                    <img src="/imatges/The_general_movie_poster.jpg"
+                                         class="relative top-1/2 left-1/2 w-56 h-80 -translate-x-1/2 rounded" alt="...">
+                                </div>
+                            </div>
+
+
+                            <div class="flex absolute bottom-2 left-1/2 z-30 space-x-3 -translate-x-1/2">
+                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false"
+                                        aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false"
+                                        aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false"
+                                        aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false"
+                                        aria-label="Slide 4" data-carousel-slide-to="2"></button>
+                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false"
+                                        aria-label="Slide 5" data-carousel-slide-to="2"></button>
+                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false"
+                                        aria-label="Slide 6" data-carousel-slide-to="2"></button>
+                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false"
+                                        aria-label="Slide 7" data-carousel-slide-to="2"></button>
+                            </div>
+
+                            <button type="button"
+                                    class="flex hover:animate-pulse absolute top-0 left-0 z-30 justify-center items-center pr-8 h-full cursor-pointer group focus:outline-none"
+                                    data-carousel-prev>
+            <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30  group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
+                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round"
+                                                              stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <span class="hidden">Anterior</span>
+            </span>
+                            </button>
+
+                            <button type="button"
+                                    class="flex hover:animate-pulse absolute top-0 right-0 z-30 justify-center items-center pl-8 h-full cursor-pointer group focus:outline-none"
+                                    data-carousel-next>
+            <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 0 group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
+                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round"
+                                                              stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                <span class="hidden">Siguiente</span>
+            </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
-
 
 
         <!-- DE PREUS -->  <!-- DE PREUS -->  <!-- DE PREUS -->  <!-- DE PREUS -->
 
         <div class="preus">
-          <div class="bg-white" style="background-color: #111827; color: white;">
-            <main>
-              <!-- Pricing section -->
-              <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="mx-auto max-w-2xl pt-24 lg:max-w-none ">
-                  <div class="mx-auto max-w-4xl text-center">
-                    <p id="preus"></p>
-                    <h1 class="text-5xl font-semibold leading-7 text-white ">Preus
-                  </h1>
-                    <p class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-4xl"
-                       style="color: white;">Plans de preus per a totes les&nbsp;mides</p>
-                  </div>
-                  <p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8" style="color: white;">Entenc que
-                    cada projecte és únic, i per això, oferisc paquets flexibles que s'adapten a les teves
-                    necessitats específiques.
-                    A continuació, trobaràs una guia de preus que reflecteix el meu compromís amb la qualitat i
-                    l'accessibilitat.</p>
+            <div class="bg-white" style="background-color: #111827; color: white;">
+                <main>
+                    <!-- Pricing section -->
+                    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                        <div class="mx-auto max-w-2xl pt-24 lg:max-w-none ">
+                            <div class="mx-auto max-w-4xl text-center">
+                                <p id="preus"></p>
+                                <h1 class="text-5xl font-semibold leading-7 text-white ">Preus
+                                </h1>
+                                <p class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-4xl"
+                                   style="color: white;">Plans de preus per a totes les&nbsp;mides</p>
+                            </div>
+                            <p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8" style="color: white;">Entenc
+                                que
+                                cada projecte és únic, i per això, oferisc paquets flexibles que s'adapten a les teves
+                                necessitats específiques.
+                                A continuació, trobaràs una guia de preus que reflecteix el meu compromís amb la
+                                qualitat i
+                                l'accessibilitat.</p>
 
 
-                  <div class="isolate mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3">
-                    <div class="rounded-3xl p-8 ring-1 ring-gray-200">
-                      <h2 id="tier-hobby" class="text-lg font-semibold leading-8 text-white">Paquet Bàsic</h2>
-                      <p class="mt-4 text-sm leading-6 text-white">Ideal per a startups o projectes
-                        personals.</p>
-                      <p class="mt-6 flex items-baseline gap-x-1">
-                        <!-- Price, update based on frequency toggle state -->
-                        <span class="text-4xl font-bold tracking-tight text-white">Des de: 500€</span>
-                      </p>
-                      <a href="#" aria-describedby="tier-freelancer"
-                         class="mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 text-green-600 ring-1 ring-inset ring-indigo-200 hover:ring-green-600">Compra</a>
-                      <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-white">
-                        <li class="flex gap-x-3">
-                          <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
-                               fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                                  clip-rule="evenodd"/>
-                          </svg>
-                          Disseny web estàndard
-                        </li>
-                        <li class="flex gap-x-3">
-                          <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
-                               fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                                  clip-rule="evenodd"/>
-                          </svg>
-                          Desenvolupament front-end amb frameworks actuals
-                        </li>
-                        <li class="flex gap-x-3">
-                          <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
-                               fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                                  clip-rule="evenodd"/>
-                          </svg>
-                          Implementació de CMS (per exemple, WordPress)
-                        </li>
-                        <li class="flex gap-x-3">
-                          <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
-                               fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                                  clip-rule="evenodd"/>
-                          </svg>
-                          SEO bàsic
-                        </li>
-                        <li class="flex gap-x-3">
-                          <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
-                               fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                                  clip-rule="evenodd"/>
-                          </svg>
-                          Suport i manteniment per 1 mes
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="rounded-3xl p-8 ring-1 ring-gray-200">
-                      <h2 id="tier-freelancer" class="text-lg font-semibold leading-8 text-white">Paquet
-                        Professional</h2>
-                      <p class="mt-4 text-sm leading-6 text-white">Perfecte per a empreses en creixement que
-                        necessiten més funcionalitats..</p>
-                      <p class="mt-6 flex items-baseline gap-x-1">
-                        <!-- Price, update based on frequency toggle state -->
-                        <span class="text-4xl font-bold tracking-tight text-white">Des de: 1500€</span>
-                      </p>
-                      <a href="#" aria-describedby="tier-freelancer"
-                         class="mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 text-green-600 ring-1 ring-inset ring-indigo-200 hover:ring-green-600">Compra</a>
-                      <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-white">
-                        <li class="flex gap-x-3">
-                          <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
-                               fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                                  clip-rule="evenodd"/>
-                          </svg>
-                          Totes les característiques del Paquet Bàsic
-                        </li>
-                        <li class="flex gap-x-3">
-                          <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
-                               fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                                  clip-rule="evenodd"/>
-                          </svg>
-                          Desenvolupament back-end personalitzat
-                        </li>
-                        <li class="flex gap-x-3">
-                          <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
-                               fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                                  clip-rule="evenodd"/>
-                          </svg>
-                          Integració de bases de dades
-                        </li>
-                        <li class="flex gap-x-3">
-                          <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
-                               fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                                  clip-rule="evenodd"/>
-                          </svg>
-                          Desenvolupament de API
-                        </li>
-                        <li class="flex gap-x-3">
-                          <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
-                               fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                                  clip-rule="evenodd"/>
-                          </svg>
-                          SEO avançat
-                        </li>
-                        <li class="flex gap-x-3">
-                          <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
-                               fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                                  clip-rule="evenodd"/>
-                          </svg>
-                          Suport i manteniment per 3 mesos
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="rounded-3xl p-8 ring-1 ring-gray-200">
-                      <h2 id="tier-startup" class="text-lg font-semibold leading-8 text-white">Paquet
-                        Premium</h2>
-                      <p class="mt-4 text-sm leading-6 text-white">La millor opció per a negocis establerts
-                        que busquen una solució totalment a mida.</p>
-                      <p class="mt-6 flex items-baseline gap-x-1">
-                        <!-- Price, update based on frequency toggle state -->
-                        <span class="text-4xl font-bold tracking-tight text-white">Des de: 3000€</span>
-                      </p>
-                      <a href="#" aria-describedby="tier-freelancer"
-                         class="mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 text-green-600 ring-1 ring-inset ring-indigo-200 hover:ring-green-600">Compra</a>
+                            <div class="isolate mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3">
+                                <div class="rounded-3xl p-8 ring-1 ring-gray-200">
+                                    <h2 id="tier-hobby" class="text-lg font-semibold leading-8 text-white">Paquet
+                                        Bàsic</h2>
+                                    <p class="mt-4 text-sm leading-6 text-white">Ideal per a startups o projectes
+                                        personals.</p>
+                                    <p class="mt-6 flex items-baseline gap-x-1">
+                                        <!-- Price, update based on frequency toggle state -->
+                                        <span class="text-4xl font-bold tracking-tight text-white">Des de: 500€</span>
+                                    </p>
+                                    <a href="#" aria-describedby="tier-freelancer"
+                                       class="mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 text-green-600 ring-1 ring-inset ring-indigo-200 hover:ring-green-600">Compra</a>
+                                    <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-white">
+                                        <li class="flex gap-x-3">
+                                            <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
+                                                 fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                                      clip-rule="evenodd"/>
+                                            </svg>
+                                            Disseny web estàndard
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
+                                                 fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                                      clip-rule="evenodd"/>
+                                            </svg>
+                                            Desenvolupament front-end amb frameworks actuals
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
+                                                 fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                                      clip-rule="evenodd"/>
+                                            </svg>
+                                            Implementació de CMS (per exemple, WordPress)
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
+                                                 fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                                      clip-rule="evenodd"/>
+                                            </svg>
+                                            SEO bàsic
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
+                                                 fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                                      clip-rule="evenodd"/>
+                                            </svg>
+                                            Suport i manteniment per 1 mes
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="rounded-3xl p-8 ring-1 ring-gray-200">
+                                    <h2 id="tier-freelancer" class="text-lg font-semibold leading-8 text-white">Paquet
+                                        Professional</h2>
+                                    <p class="mt-4 text-sm leading-6 text-white">Perfecte per a empreses en creixement
+                                        que
+                                        necessiten més funcionalitats..</p>
+                                    <p class="mt-6 flex items-baseline gap-x-1">
+                                        <!-- Price, update based on frequency toggle state -->
+                                        <span class="text-4xl font-bold tracking-tight text-white">Des de: 1500€</span>
+                                    </p>
+                                    <a href="#" aria-describedby="tier-freelancer"
+                                       class="mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 text-green-600 ring-1 ring-inset ring-indigo-200 hover:ring-green-600">Compra</a>
+                                    <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-white">
+                                        <li class="flex gap-x-3">
+                                            <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
+                                                 fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                                      clip-rule="evenodd"/>
+                                            </svg>
+                                            Totes les característiques del Paquet Bàsic
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
+                                                 fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                                      clip-rule="evenodd"/>
+                                            </svg>
+                                            Desenvolupament back-end personalitzat
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
+                                                 fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                                      clip-rule="evenodd"/>
+                                            </svg>
+                                            Integració de bases de dades
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
+                                                 fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                                      clip-rule="evenodd"/>
+                                            </svg>
+                                            Desenvolupament de API
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
+                                                 fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                                      clip-rule="evenodd"/>
+                                            </svg>
+                                            SEO avançat
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
+                                                 fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                                      clip-rule="evenodd"/>
+                                            </svg>
+                                            Suport i manteniment per 3 mesos
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="rounded-3xl p-8 ring-1 ring-gray-200">
+                                    <h2 id="tier-startup" class="text-lg font-semibold leading-8 text-white">Paquet
+                                        Premium</h2>
+                                    <p class="mt-4 text-sm leading-6 text-white">La millor opció per a negocis
+                                        establerts
+                                        que busquen una solució totalment a mida.</p>
+                                    <p class="mt-6 flex items-baseline gap-x-1">
+                                        <!-- Price, update based on frequency toggle state -->
+                                        <span class="text-4xl font-bold tracking-tight text-white">Des de: 3000€</span>
+                                    </p>
+                                    <a href="#" aria-describedby="tier-freelancer"
+                                       class="mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 text-green-600 ring-1 ring-inset ring-indigo-200 hover:ring-green-600">Compra</a>
 
-                      <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-white">
-                        <li class="flex gap-x-3">
-                          <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
-                               fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                                  clip-rule="evenodd"/>
-                          </svg>
-                          Totes les característiques dels Paquets Bàsic i Professional
-                        </li>
-                        <li class="flex gap-x-3">
-                          <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
-                               fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                                  clip-rule="evenodd"/>
-                          </svg>
-                          Disseny web personalitzat i UX/UI avançat
-                        </li>
-                        <li class="flex gap-x-3">
-                          <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
-                               fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                                  clip-rule="evenodd"/>
-                          </svg>
-                          Advanced analytics
-                        </li>
-                        <li class="flex gap-x-3">
-                          <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
-                               fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                                  clip-rule="evenodd"/>
-                          </svg>
-                          Arquitectura d'alt rendiment i seguretat
-                        </li>
-                        <li class="flex gap-x-3">
-                          <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
-                               fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                                  clip-rule="evenodd"/>
-                          </svg>
-                          Anàlisis de dades i informes
-                        </li>
-                        <li class="flex gap-x-3">
-                          <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
-                               fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                                  clip-rule="evenodd"/>
-                          </svg>
-                          Estratègia de contingut digital
-                        </li>
-                        <li class="flex gap-x-3">
-                          <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
-                               fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                                  clip-rule="evenodd"/>
-                          </svg>
-                          Suport i manteniment per 6 mesos
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+                                    <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-white">
+                                        <li class="flex gap-x-3">
+                                            <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
+                                                 fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                                      clip-rule="evenodd"/>
+                                            </svg>
+                                            Totes les característiques dels Paquets Bàsic i Professional
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
+                                                 fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                                      clip-rule="evenodd"/>
+                                            </svg>
+                                            Disseny web personalitzat i UX/UI avançat
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
+                                                 fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                                      clip-rule="evenodd"/>
+                                            </svg>
+                                            Advanced analytics
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
+                                                 fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                                      clip-rule="evenodd"/>
+                                            </svg>
+                                            Arquitectura d'alt rendiment i seguretat
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
+                                                 fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                                      clip-rule="evenodd"/>
+                                            </svg>
+                                            Anàlisis de dades i informes
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
+                                                 fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                                      clip-rule="evenodd"/>
+                                            </svg>
+                                            Estratègia de contingut digital
+                                        </li>
+                                        <li class="flex gap-x-3">
+                                            <svg class="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20"
+                                                 fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                                      clip-rule="evenodd"/>
+                                            </svg>
+                                            Suport i manteniment per 6 mesos
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
 
-                </div>
-              </div>
-
-              <!--FIANL DE PREUS -->   <!--FIANL DE PREUS -->    <!--FIANL DE PREUS -->
-
-
-
-                <!-- FAQ section -->
-
-                <div class="bg-white " style="background-color: #111827; color: white;">
-                  <div class=" space-y-6 divide-y divide-gray-900/10">
-                    <div class=" my-5 my-24 max-w-7xl px-6 sm:my-56 lg:px-8 ">
-                      <div class=" mx-auto max-w-4xl divide-y divide-white">
-                        <p id="preguntes"> <h2 class=" text-3xl font-bold leading-10 text-center text-white">Preguntes
-                        Freqüents</h2></p>
-                        <dl class="mt-10 space-y-6 divide-y divide-gray-900/10">
-                          <div class="pt-6">
-                            <dt>
-                              <!-- Expand/collapse question button -->
-                              <button type="button"
-                                      class="flex w-full items-start justify-between text-left text-white"
-                                      aria-controls="faq-0" aria-expanded="false">
-                                <span class="text-base font-semibold leading-7">Puc contractar només el desenvolupament front-end o back-end?</span>
-                                <span class="ml-6 flex h-7 items-center">
-                                <!--
-                                  Icon when question is collapsed.
-
-                                  Item expanded: "hidden", Item collapsed: ""
-                                -->
-                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                     aria-hidden="true">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/>
-                                </svg>
-                                  <!--
-                                    Icon when question is expanded.
-
-                                    Item expanded: "", Item collapsed: "hidden"
-                                  -->
-                                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                     aria-hidden="true">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6"/>
-                                </svg>
-                              </span>
-                              </button>
-                            </dt>
-                            <dd class="mt-2 pr-12" id="faq-1">
-                              <p class="text-base leading-7 text-white">Sí, encara que sóc especialista en
-                                solucions full-stack, estic obert a treballar en projectes que requereixin només una
-                                part del desenvolupament.
-                                Parlarem dels teus requisits específics per determinar la millor manera de
-                                procedir.</p>
-                            </dd>
-                          </div>
-                          <div class="pt-6">
-                            <dt>
-                              <!-- Expand/collapse question button -->
-                              <button type="button"
-                                      class="flex w-full items-start justify-between text-left text-gray-900"
-                                      aria-controls="faq-0" aria-expanded="false">
-                                <span class="text-base font-semibold leading-7">Quin suport i manteniment oferixes després de finalitzar el projecte?</span>
-                                <span class="ml-6 flex h-7 items-center">
-                                <!--
-                                  Icon when question is collapsed.
-
-                                  Item expanded: "hidden", Item collapsed: ""
-                                -->
-                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                     aria-hidden="true">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/>
-                                </svg>
-                                  <!--
-                                    Icon when question is expanded.
-
-                                    Item expanded: "", Item collapsed: "hidden"
-                                  -->
-                                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                     aria-hidden="true">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6"/>
-                                </svg>
-                              </span>
-                              </button>
-                            </dt>
-                            <dd class="mt-2 pr-12" id="faq-0">
-                              <p class="text-base leading-7 text-white">Els meus serveis inclouen manteniment i
-                                suport tècnic post-llançament durant un període determinat, depenent del paquet
-                                contractat.
-                                Això inclou correccions de bugs, actualitzacions de seguretat i petites
-                                modificacions. Per a serveis continus a llarg termini, podem discutir un pla de
-                                manteniment mensual.</p>
-                            </dd>
-                          </div>
-
-                          <!-- More questions... -->
-                        </dl>
-                      </div>
+                        </div>
                     </div>
 
-                  </div>
+                    <!--FIANL DE PREUS -->   <!--FIANL DE PREUS -->    <!--FIANL DE PREUS -->
 
 
-                  <!-- FIN VISTAS RÁPIDAS DEL PRODUCTO CON SELECTOR DE COLOR Y TALLA-->
+                    <!-- FAQ section -->
 
 
+                    <div class="bg-white" style="background-color: #111827; color: white;">
+                        <div class="space-y-6 divide-y divide-gray-900/10">
+                            <div class="my-24 max-w-7xl px-6 lg:px-8 ">
+                                <div class="mx-auto max-w-4xl divide-y divide-white">
+                                    <h2 class="text-3xl font-bold leading-10 text-center text-white">Preguntes
+                                        Freqüents</h2>
+                                    <dl class="mt-10 space-y-6 divide-y divide-gray-900/10">
+                                        <!-- Pregunta 1 -->
+                                        <div class="pt-6">
+                                            <dt>
+                                                <button type="button"
+                                                        class="flex w-full items-start justify-between text-left text-white"
+                                                        onclick="toggleFAQ('faq-1')">
 
+                                                    <span class="text-base font-semibold leading-7">Com puc començar a utilitzar TeamFlick ?</span>
+                                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                                         stroke-width="1.5" stroke="currentColor"
+                                                         aria-hidden="true">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                              d="M12 6v12m6-6H6"/>
+                                                    </svg>
+                                                </button>
 
-<!--       EQUIP    Dark version with large images-->
+                                            </dt>
+                                            <dd id="faq-1" class="mt-2 pr-12 hidden">
+                                                Simplement registra't i gaudeix d'un període de prova gratuït. Després,
+                                                selecciona el pla que més s'adapti a les teves necessitats.
+                                            </dd>
+                                        </div>
 
+                                        <!-- Pregunta 2 -->
+                                        <div class="pt-6">
+                                            <dt>
+                                                <button type="button"
+                                                        class="flex w-full items-start justify-between text-left text-white"
+                                                        onclick="toggleFAQ('faq-2')">
+                                                    <span class="text-base font-semibold leading-7">Quin tipus de contingut està disponible?</span>
+                                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                                         stroke-width="1.5" stroke="currentColor"
+                                                         aria-hidden="true">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                              d="M12 6v12m6-6H6"/>
+                                                    </svg>
+                                                </button>
+                                            </dt>
+                                            <dd id="faq-2" class="mt-2 pr-12 hidden">
+                                                Oferim una àmplia varietat de pel·lícules, sèries, documentals i
+                                                contingut per a nens de diferents gèneres i països.
+                                            </dd>
+                                        </div>
+                                        <!-- Pregunta 3 -->
+                                        <div class="pt-6">
+                                            <dt>
+                                                <button type="button"
+                                                        class="flex w-full items-start justify-between text-left text-white"
+                                                        onclick="toggleFAQ('faq-3')">
+                                                    <span class="text-base font-semibold leading-7">Es pot cancel·lar la subscripció en qualsevol moment?</span>
+                                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                                         stroke-width="1.5" stroke="currentColor"
+                                                         aria-hidden="true">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                              d="M12 6v12m6-6H6"/>
+                                                    </svg>
+                                                </button>
+                                            </dt>
+                                            <dd id="faq-3" class="mt-2 pr-12 hidden">
+                                                Sí, pots cancel·lar la teva subscripció en qualsevol moment sense cap
+                                                cost addicional.
+                                            </dd>
+                                        </div>
 
-                  <div class="bg-gray-900 py-24 sm:py-32">
-                    <div class="mx-auto max-w-7xl px-6 text-center lg:px-8">
-                      <div class="mx-auto max-w-2xl">
-                        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Qui som?</h2>
-                        <p class="mt-4 text-lg leading-8 text-gray-400">Som un grup dinàmic de persones apassionades pel que fem.</p>
-                      </div>
-                      <ul role="list" class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
-                        <!-- Person 1 -->
-                        <li class="rounded-2xl bg-gray-800 px-8 py-10 relative" style="background-image: url('imatges/team_back2.jpeg'); background-size: cover;">
-                          <img class="mx-auto h-48 w-48 rounded-full md:h-56 md:w-56 border-4 border-white mb-20" src="imatges/team1.jpeg" alt="">
-                          <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4">
-                            <h3 class="text-base font-semibold leading-7 tracking-tight">Sergio Bertomeu</h3>
-                            <p class="text-sm leading-6 text-gray-400">PLACEHOLDER</p>
-                            <ul role="list" class="mt-2 flex justify-center gap-x-6">
-                            <li>
-                              <a href="#" class="text-gray-400 hover:text-gray-300">
-                                <span class="sr-only">Twitter</span>
-                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                  <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                                </svg>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#" class="text-gray-400 hover:text-gray-300">
-                                <span class="sr-only">LinkedIn</span>
-                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                  <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
-                                </svg>
-                              </a>
-                            </li>
-                          </ul>
-                         </div>
-                        </li>
-                        <!-- Person 2 -->
-                        <li class="rounded-2xl bg-gray-800 px-8 py-10 relative " style="background-image: url('imatges/team_back2.jpeg'); background-size: cover;">
-                          <img class="mx-auto h-48 w-48 rounded-full md:h-56 md:w-56 border-4 border-white mb-20" src="imatges/team2.jpeg" alt="">
-                          <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4">
-                            <h3 class="text-base font-semibold leading-7 tracking-tight">Sara Bogdan</h3>
-                            <p class="text-sm leading-6 text-gray-400">PLACEHOLDER</p>
-                            <ul role="list" class="mt-2 flex justify-center gap-x-6">
-                            <li>
-                              <a href="#" class="text-gray-400 hover:text-gray-300">
-                                <span class="sr-only">Twitter</span>
-                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                  <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                                </svg>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#" class="text-gray-400 hover:text-gray-300">
-                                <span class="sr-only">LinkedIn</span>
-                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                  <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
-                                </svg>
-                              </a>
-                            </li>
-                          </ul>
-                         </div>
-                        </li>
-                        <!-- Person 3 -->
-                        <li class="rounded-2xl bg-gray-800 px-8 py-10 relative" style="background-image: url('imatges/team_back2.jpeg'); background-size: cover;">
-                          <img class="mx-auto h-48 w-48 rounded-full md:h-56 md:w-56 border-4 border-white mb-20" src="imatges/team3.jpeg" alt="">
-                          <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4">
-                            <h3 class="text-base font-semibold leading-7 tracking-tight">Norbert Falcó</h3>
-                            <p class="text-sm leading-6 text-gray-400">PLACEHOLDER</p>
-                            <ul role="list" class="mt-2 flex justify-center gap-x-6">
-                            <li>
-                              <a href="#" class="text-gray-400 hover:text-gray-300">
-                                <span class="sr-only">Twitter</span>
-                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                  <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                                </svg>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#" class="text-gray-400 hover:text-gray-300">
-                                <span class="sr-only">LinkedIn</span>
-                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                  <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
-                                </svg>
-                              </a>
-                            </li>
-                          </ul>
-                         </div>
-                        </li>
-                      </ul>
+                                        <!-- Pregunta 4 -->
+                                        <div class="pt-6">
+                                            <dt>
+                                                <button type="button"
+                                                        class="flex w-full items-start justify-between text-left text-white"
+                                                        onclick="toggleFAQ('faq-4')">
+                                                    <span class="text-base font-semibold leading-7">Es poden veure pel·lícules i sèries offline?</span>
+                                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                                         stroke-width="1.5" stroke="currentColor"
+                                                         aria-hidden="true">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                              d="M12 6v12m6-6H6"/>
+                                                    </svg>
+                                                </button>
+                                            </dt>
+                                            <dd id="faq-4" class="mt-2 pr-12 hidden">
+                                                Sí, pots descarregar el teu contingut preferit i veure'l sense connexió
+                                                a qualsevol moment i lloc.
+                                            </dd>
+                                        </div>
+
+                                        <!-- Pregunta 5 -->
+                                        <div class="pt-6">
+                                            <dt>
+                                                <button type="button"
+                                                        class="flex w-full items-start justify-between text-left text-white"
+                                                        onclick="toggleFAQ('faq-5')">
+                                                    <span class="text-base font-semibold leading-7">Com puc gestionar els controls parentals?</span>
+                                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                                         stroke-width="1.5" stroke="currentColor"
+                                                         aria-hidden="true">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                              d="M12 6v12m6-6H6"/>
+                                                    </svg>
+                                                </button>
+                                            </dt>
+                                            <dd id="faq-5" class="mt-2 pr-12 hidden">
+                                                Oferim diverses opcions de control parental per assegurar un entorn
+                                                segur per als menors, incloent la creació de perfils per a nens i
+                                                bloqueig de contingut segons l'edat.
+                                            </dd>
+                                        </div>
+
+                                        <!-- Pregunta 6 -->
+                                        <div class="pt-6">
+                                            <dt>
+                                                <button type="button"
+                                                        class="flex w-full items-start justify-between text-left text-white"
+                                                        onclick="toggleFAQ('faq-6')">
+                                                    <span class="text-base font-semibold leading-7">Quants dispositius es poden utilitzar simultàniament?</span>
+                                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                                         stroke-width="1.5" stroke="currentColor"
+                                                         aria-hidden="true">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                              d="M12 6v12m6-6H6"/>
+                                                    </svg>
+                                                </button>
+                                            </dt>
+                                            <dd id="faq-6" class="mt-2 pr-12 hidden">
+                                                Això depèn del pla de subscripció que tinguis. Els nostres plans varien
+                                                en el nombre de dispositius compatibles per streaming simultani.
+                                            </dd>
+                                        </div>
+
+                                        <!-- Pregunta 7 -->
+                                        <div class="pt-6">
+                                            <dt>
+                                                <button type="button"
+                                                        class="flex w-full items-start justify-between text-left text-white"
+                                                        onclick="toggleFAQ('faq-7')">
+                                                    <span class="text-base font-semibold leading-7">Què passa si experimento problemes tècnics o errors?</span>
+                                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                                         stroke-width="1.5" stroke="currentColor"
+                                                         aria-hidden="true">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                              d="M12 6v12m6-6H6"/>
+                                                    </svg>
+                                                </button>
+                                            </dt>
+                                            <dd id="faq-7" class="mt-2 pr-12 hidden">
+                                                El nostre equip de suport està disponible per ajudar-te amb qualsevol
+                                                problema tècnic o error que puguis experimentar. Contacta'ns a través de
+                                                la nostra pàgina de suport.
+                                            </dd>
+                                        </div>
+
+                                        <!-- Pregunta 8 -->
+                                        <div class="pt-6">
+                                            <dt>
+                                                <button type="button"
+                                                        class="flex w-full items-start justify-between text-left text-white"
+                                                        onclick="toggleFAQ('faq-8')">
+                                                    <span class="text-base font-semibold leading-7">Hi ha contingut en altres idiomes disponibles?</span>
+                                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                                         stroke-width="1.5" stroke="currentColor"
+                                                         aria-hidden="true">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                              d="M12 6v12m6-6H6"/>
+                                                    </svg>
+                                                </button>
+                                            </dt>
+                                            <dd id="faq-8" class="mt-2 pr-12 hidden">
+                                                Sí, oferim una àmplia varietat de contingut en diversos idiomes, així
+                                                com opcions de subtitulació i doblatge.
+                                            </dd>
+                                        </div>
+
+                                        <!-- Pregunta 9 -->
+                                        <div class="pt-6">
+                                            <dt>
+                                                <button type="button"
+                                                        class="flex w-full items-start justify-between text-left text-white"
+                                                        onclick="toggleFAQ('faq-9')">
+                                                    <span class="text-base font-semibold leading-7">Puc canviar el meu pla de subscripció?</span>
+                                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                                         stroke-width="1.5" stroke="currentColor"
+                                                         aria-hidden="true">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                              d="M12 6v12m6-6H6"/>
+                                                    </svg>
+                                                </button>
+                                            </dt>
+                                            <dd id="faq-9" class="mt-2 pr-12 hidden">
+                                                Sí, pots canviar el teu pla de subscripció en qualsevol moment a través
+                                                de la configuració del teu compte.
+                                            </dd>
+                                        </div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
 
-                  <!--   FIN    EQUIP    Dark version with large images-->
+                    <!-- JavaScript per a funcionalitat d'expandir/col·lapsar -->
+                    <script>
+                        function toggleFAQ(faqId) {
+                            var element = document.getElementById(faqId);
+                            element.classList.toggle("hidden");
+                        }
+                    </script>
+                    <!-- FIN VISTAS RÁPIDAS DEL PRODUCTO CON SELECTOR DE COLOR Y TALLA-->
 
-<!--          FEATURES        Simple three column with small icons on dark-->
 
-                  <div class="bg-gray-900 py-24 sm:py-32">
-                    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-                      <div class="mx-auto max-w-2xl lg:text-center">
-                        <h2 class="text-base font-semibold leading-7 text-indigo-400">Explora les funcionalitats de TeamFlick</h2>
-                        <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Desbloqueja un món d'entreteniment</p>
-                      </div>
-                      <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-                        <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
-                          <div class="flex flex-col">
-                            <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
-                              <svg class="h-10 w-10 flex-none text-indigo-400" viewBox="0 0 25 25" fill="currentColor" aria-hidden="true">
-                                <path d="M8 10L12 3L16 10H8Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                <path d="M10 17.5C10 19.433 8.433 21 6.5 21C4.567 21 3 19.433 3 17.5C3 15.567 4.567 14 6.5 14C8.433 14 10 15.567 10 17.5Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                <path d="M14 14H21V21H14V14Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                              </svg>
-                              Compatibilitat Multiplataforma
-                            </dt>
-                            <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
-                              <p class="flex-auto">TeamFlick és accessible des de diversos dispositius, ja sigui des de l'ordinador,
-                                la tauleta o el mòbil, permetent als usuaris gaudir de "watch parties" des de qualsevol lloc.</p>
-                              <p class="mt-6">
-                                <a href="#" class="text-sm font-semibold leading-6 text-indigo-400">Més informació <span
-                                        aria-hidden="true">→</span></a>
-                              </p>
-                            </dd>
-                          </div>
-                          <div class="flex flex-col">
-                            <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
-                              <svg class="h-10 w-10 flex-none text-indigo-400" viewBox="0 0 25 25" fill="currentColor"
-                                   aria-hidden="true">
-                                <path d="M18 7H18.01M15 7H15.01M18 17H18.01M15 17H15.01M6 10H18C18.9319 10 19.3978 10 19.7654 9.84776C20.2554 9.64477 20.6448 9.25542 20.8478 8.76537C21 8.39782 21 7.93188 21 7C21 6.06812 21 5.60218 20.8478 5.23463C20.6448 4.74458 20.2554 4.35523 19.7654 4.15224C19.3978 4 18.9319 4 18 4H6C5.06812 4 4.60218 4 4.23463 4.15224C3.74458 4.35523 3.35523 4.74458 3.15224 5.23463C3 5.60218 3 6.06812 3 7C3 7.93188 3 8.39782 3.15224 8.76537C3.35523 9.25542 3.74458 9.64477 4.23463 9.84776C4.60218 10 5.06812 10 6 10ZM6 20H18C18.9319 20 19.3978 20 19.7654 19.8478C20.2554 19.6448 20.6448 19.2554 20.8478 18.7654C21 18.3978 21 17.9319 21 17C21 16.0681 21 15.6022 20.8478 15.2346C20.6448 14.7446 20.2554 14.3552 19.7654 14.1522C19.3978 14 18.9319 14 18 14H6C5.06812 14 4.60218 14 4.23463 14.1522C3.74458 14.3552 3.35523 14.7446 3.15224 15.2346C3 15.6022 3 16.0681 3 17C3 17.9319 3 18.3978 3.15224 18.7654C3.35523 19.2554 3.74458 19.6448 4.23463 19.8478C4.60218 20 5.06812 20 6 20Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                </path>
-                              </svg>
-                              Biblioteca de continguts
-                            </dt>
-                            <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
-                              <p class="flex-auto">Explora una varietat de gèneres, nous llançaments i clàssics a la nostra extensa
-                                biblioteca de streaming per satisfer un ampli públic.</p>
-                              <p class="mt-6">
-                                <a href="#" class="text-sm font-semibold leading-6 text-indigo-400">Més informació <span
-                                        aria-hidden="true">→</span></a>
-                              </p>
-                            </dd>
-                          </div>
-                          <div class="flex flex-col">
-                            <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
-                              <svg class="h-12 w-12 flex-none text-indigo-400" viewBox="0 0 25 25" fill="currentColor"
-                                   aria-hidden="true">
-                                <path d="M6.00098 4H6.01098M3.17188 10C3.58371 8.83481 4.69495 8 6.00117 8C7.30739 8 8.41863 8.83481 8.83046 10M6.00098 15H6.01098M3.17188 21C3.58371 19.8348 4.69495 19 6.00117 19C7.30739 19 8.41863 19.8348 8.83046 21M13.601 8.5H19.401C19.961 8.5 20.2411 8.5 20.455
+                    <!--       EQUIP    Dark version with large images-->
+
+
+                    <div class="bg-gray-900 py-24 sm:py-32">
+                        <div class="mx-auto max-w-7xl px-6 text-center lg:px-8">
+                            <div class="mx-auto max-w-2xl">
+                                <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Qui som?</h2>
+                                <p class="mt-4 text-lg leading-8 text-gray-400">Som un grup dinàmic de persones apassionades pel que fem.</p>
+                            </div>
+                            <ul role="list" class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
+                                <!-- Person 1 -->
+                                <li class="rounded-2xl bg-gray-800 px-8 py-10 relative" style="background-image: url('imatges/team_back2.jpeg'); background-size: cover;">
+                                    <img class="mx-auto h-48 w-48 rounded-full md:h-56 md:w-56 border-4 border-white mb-20" src="imatges/team1.jpeg" alt="">
+                                    <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4">
+                                        <h3 class="text-base font-semibold leading-7 tracking-tight">Sergio Bertomeu</h3>
+                                        <p class="text-sm leading-6 text-gray-400">PLACEHOLDER</p>
+                                        <ul role="list" class="mt-2 flex justify-center gap-x-6">
+                                            <li>
+                                                <a href="#" class="text-gray-400 hover:text-gray-300">
+                                                    <span class="sr-only">Twitter</span>
+                                                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                                        <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="text-gray-400 hover:text-gray-300">
+                                                    <span class="sr-only">LinkedIn</span>
+                                                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                                        <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <!-- Person 2 -->
+                                <li class="rounded-2xl bg-gray-800 px-8 py-10 relative " style="background-image: url('imatges/team_back2.jpeg'); background-size: cover;">
+                                    <img class="mx-auto h-48 w-48 rounded-full md:h-56 md:w-56 border-4 border-white mb-20" src="imatges/team2.jpeg" alt="">
+                                    <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4">
+                                        <h3 class="text-base font-semibold leading-7 tracking-tight">Sara Bogdan</h3>
+                                        <p class="text-sm leading-6 text-gray-400">PLACEHOLDER</p>
+                                        <ul role="list" class="mt-2 flex justify-center gap-x-6">
+                                            <li>
+                                                <a href="#" class="text-gray-400 hover:text-gray-300">
+                                                    <span class="sr-only">Twitter</span>
+                                                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                                        <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="text-gray-400 hover:text-gray-300">
+                                                    <span class="sr-only">LinkedIn</span>
+                                                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                                        <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <!-- Person 3 -->
+                                <li class="rounded-2xl bg-gray-800 px-8 py-10 relative" style="background-image: url('imatges/team_back2.jpeg'); background-size: cover;">
+                                    <img class="mx-auto h-48 w-48 rounded-full md:h-56 md:w-56 border-4 border-white mb-20" src="imatges/team3.jpeg" alt="">
+                                    <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4">
+                                        <h3 class="text-base font-semibold leading-7 tracking-tight">Norbert Falcó</h3>
+                                        <p class="text-sm leading-6 text-gray-400">PLACEHOLDER</p>
+                                        <ul role="list" class="mt-2 flex justify-center gap-x-6">
+                                            <li>
+                                                <a href="#" class="text-gray-400 hover:text-gray-300">
+                                                    <span class="sr-only">Twitter</span>
+                                                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                                        <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="text-gray-400 hover:text-gray-300">
+                                                    <span class="sr-only">LinkedIn</span>
+                                                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                                        <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--   FIN    EQUIP    Dark version with large images-->
+
+
+
+                    <!--          FEATURES        Simple three column with small icons on dark-->
+
+                    <div class="bg-gray-900 py-24 sm:py-32">
+                        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                            <div class="mx-auto max-w-2xl lg:text-center">
+                                <h2 class="text-base font-semibold leading-7 text-indigo-400">Explora les funcionalitats
+                                    de TeamFlick</h2>
+                                <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Desbloqueja un
+                                    món d'entreteniment</p>
+                            </div>
+                            <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+                                <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
+                                    <div class="flex flex-col">
+                                        <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                                            <svg class="h-10 w-10 flex-none text-indigo-400" viewBox="0 0 25 25"
+                                                 fill="currentColor" aria-hidden="true">
+                                                <path d="M8 10L12 3L16 10H8Z" stroke="#000000" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M10 17.5C10 19.433 8.433 21 6.5 21C4.567 21 3 19.433 3 17.5C3 15.567 4.567 14 6.5 14C8.433 14 10 15.567 10 17.5Z"
+                                                      stroke="#000000" stroke-width="2" stroke-linecap="round"
+                                                      stroke-linejoin="round"></path>
+                                                <path d="M14 14H21V21H14V14Z" stroke="#000000" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                            Compatibilitat Multiplataforma
+                                        </dt>
+                                        <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+                                            <p class="flex-auto">TeamFlick és accessible des de diversos dispositius, ja
+                                                sigui des de l'ordinador,
+                                                la tauleta o el mòbil, permetent als usuaris gaudir de "watch parties"
+                                                des de qualsevol lloc.</p>
+                                            <p class="mt-6">
+                                                <a href="#" class="text-sm font-semibold leading-6 text-indigo-400">Més
+                                                    informació <span
+                                                            aria-hidden="true">→</span></a>
+                                            </p>
+                                        </dd>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                                            <svg class="h-10 w-10 flex-none text-indigo-400" viewBox="0 0 25 25"
+                                                 fill="currentColor"
+                                                 aria-hidden="true">
+                                                <path d="M18 7H18.01M15 7H15.01M18 17H18.01M15 17H15.01M6 10H18C18.9319 10 19.3978 10 19.7654 9.84776C20.2554 9.64477 20.6448 9.25542 20.8478 8.76537C21 8.39782 21 7.93188 21 7C21 6.06812 21 5.60218 20.8478 5.23463C20.6448 4.74458 20.2554 4.35523 19.7654 4.15224C19.3978 4 18.9319 4 18 4H6C5.06812 4 4.60218 4 4.23463 4.15224C3.74458 4.35523 3.35523 4.74458 3.15224 5.23463C3 5.60218 3 6.06812 3 7C3 7.93188 3 8.39782 3.15224 8.76537C3.35523 9.25542 3.74458 9.64477 4.23463 9.84776C4.60218 10 5.06812 10 6 10ZM6 20H18C18.9319 20 19.3978 20 19.7654 19.8478C20.2554 19.6448 20.6448 19.2554 20.8478 18.7654C21 18.3978 21 17.9319 21 17C21 16.0681 21 15.6022 20.8478 15.2346C20.6448 14.7446 20.2554 14.3552 19.7654 14.1522C19.3978 14 18.9319 14 18 14H6C5.06812 14 4.60218 14 4.23463 14.1522C3.74458 14.3552 3.35523 14.7446 3.15224 15.2346C3 15.6022 3 16.0681 3 17C3 17.9319 3 18.3978 3.15224 18.7654C3.35523 19.2554 3.74458 19.6448 4.23463 19.8478C4.60218 20 5.06812 20 6 20Z"
+                                                      stroke="#000000" stroke-width="2" stroke-linecap="round"
+                                                      stroke-linejoin="round">
+                                                </path>
+                                            </svg>
+                                            Biblioteca de continguts
+                                        </dt>
+                                        <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+                                            <p class="flex-auto">Explora una varietat de gèneres, nous llançaments i
+                                                clàssics a la nostra extensa
+                                                biblioteca de streaming per satisfer un ampli públic.</p>
+                                            <p class="mt-6">
+                                                <a href="#" class="text-sm font-semibold leading-6 text-indigo-400">Més
+                                                    informació <span
+                                                            aria-hidden="true">→</span></a>
+                                            </p>
+                                        </dd>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                                            <svg class="h-12 w-12 flex-none text-indigo-400" viewBox="0 0 25 25"
+                                                 fill="currentColor"
+                                                 aria-hidden="true">
+                                                <path d="M6.00098 4H6.01098M3.17188 10C3.58371 8.83481 4.69495 8 6.00117 8C7.30739 8 8.41863 8.83481 8.83046 10M6.00098 15H6.01098M3.17188 21C3.58371 19.8348 4.69495 19 6.00117 19C7.30739 19 8.41863 19.8348 8.83046 21M13.601 8.5H19.401C19.961 8.5 20.2411 8.5 20.455
               8.39101C20.6431 8.29513 20.7961 8.14215 20.892 7.95399C21.001 7.74008 21.001 7.46005 21.001 6.9V6.1C21.001 5.53995 21.001 5.25992 20.892 5.04601C20.7961 4.85785 20.6431 4.70487 20.455 4.60899C20.2411 4.5 19.961 4.5 19.401 4.5H13.601C13.0409 4.5 12.7609 4.5 12.547
               4.60899C12.3588 4.70487 12.2058 4.85785 12.11 5.04601C12.001 5.25992 12.001 5.53995 12.001 6.1V6.9C12.001 7.46005 12.001 7.74008 12.11 7.95399C12.2058 8.14215 12.3588 8.29513 12.547 8.39101C12.7609 8.5 13.0409 8.5 13.601 8.5ZM13.601 19.5H19.401C19.961 19.5 20.2411
               19.5 20.455 19.391C20.6431 19.2951 20.7961 19.1422 20.892 18.954C21.001 18.7401 21.001 18.4601 21.001 17.9V17.1C21.001 16.5399 21.001 16.2599 20.892 16.046C20.7961 15.8578 20.6431 15.7049 20.455 15.609C20.2411 15.5 19.961 15.5 19.401 15.5H13.601C13.0409 15.5 12.7609
               15.5 12.547 15.609C12.3588 15.7049 12.2058 15.8578 12.11 16.046C12.001 16.2599 12.001 16.5399 12.001 17.1V17.9C12.001 18.4601 12.001 18.7401 12.11 18.954C12.2058 19.1422 12.3588 19.2951 12.547 19.391C12.7609 19.5 13.0409 19.5 13.601 19.5ZM7.00098 4C7.00098 4.55228
               6.55326 5 6.00098 5C5.44869 5 5.00098 4.55228 5.00098 4C5.00098 3.44772 5.44869 3 6.00098 3C6.55326 3 7.00098 3.44772 7.00098 4ZM7.00098 15C7.00098 15.5523 6.55326 16 6.00098 16C5.44869 16 5.00098 15.5523 5.00098 15C5.00098 14.4477 5.44869 14 6.00098 14C6.55326 14 7.00098 14.4477 7.00098 15Z"
-                                      stroke="#000000" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
-                              </svg>
-                              Interacció en temps real
-                            </dt>
-                            <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
-                              <p class="flex-auto">Experimenta l'emoció del xat en temps real durant la reproducció de pel·lícules amb funcions
-                                com reaccions i comentaris sincronitzats, creant una experiència cinematogràfica compartida.</p>
-                              <p class="mt-6">
-                                <a href="#" class="text-sm font-semibold leading-6 text-indigo-400">Més informació <span
-                                        aria-hidden="true">→</span></a>
-                              </p>
-                            </dd>
-                          </div>
-                          <div class="flex flex-col">
-                            <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
-                              <svg class="h-10 w-10 flex-none text-indigo-400" viewBox="0 0 25 25" fill="currentColor"
-                                   aria-hidden="true">
-                                <path d="M3 9H9.5M21 9H9.5M9.5 9L14.5 4M14.5 4H17.8C18.8467 4 19.4044 4 19.8221 4.1779M14.5 4H6.2C5.07989 4 4.51984 4 4.09202 4.21799C3.71569 4.40973 3.40973 4.71569 3.21799 5.09202C3 5.51984 3 6.07989 3 7.2V16.8C3 17.9201 3 18.4802 3.21799 18.908C3.40973 19.2843 3.71569 19.5903 4.09202 19.782C4.51984 20 5.07989 20 6.2 20H17.8C18.9201 20 19.4802 20 19.908 19.782C20.2843 19.5903 20.5903 19.2843 20.782 18.908C21 18.4802 21 17.9201 21 16.8V7.2C21 6.07989 21 5.51984 20.782 5.09202C20.5903 4.71569 20.2843 4.40973 19.908 4.21799C19.88 4.20371 19.8514 4.19037 19.8221 4.1779M9 4L4 9M15 9.00015L19.8221 4.1779M15 14.5L10 17.5V11.5L15 14.5Z" stroke="#000000" stroke-width="2" stroke-linejoin="round">
-                                </path>
-                              </svg>
-                              Interfície "User-Friendly"
-                            </dt>
-                            <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
-                              <p class="flex-auto">Navegueu sense esforç a través de la interfície user-friendly de TeamFlick, amb
-                                visualitzacions netes i un disseny intuïtiu per a una organització de festes de visualització sense problemes.</p>
-                              <p class="mt-6">
-                                <a href="#" class="text-sm font-semibold leading-6 text-indigo-400">Més informació <span
-                                        aria-hidden="true">→</span></a>
-                              </p>
-                            </dd>
-                          </div>
-                        </dl>
-                      </div>
+                                                      stroke="#000000" stroke-width="1.6" stroke-linecap="round"
+                                                      stroke-linejoin="round"></path>
+                                            </svg>
+                                            Interacció en temps real
+                                        </dt>
+                                        <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+                                            <p class="flex-auto">Experimenta l'emoció del xat en temps real durant la
+                                                reproducció de pel·lícules amb funcions
+                                                com reaccions i comentaris sincronitzats, creant una experiència
+                                                cinematogràfica compartida.</p>
+                                            <p class="mt-6">
+                                                <a href="#" class="text-sm font-semibold leading-6 text-indigo-400">Més
+                                                    informació <span
+                                                            aria-hidden="true">→</span></a>
+                                            </p>
+                                        </dd>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                                            <svg class="h-10 w-10 flex-none text-indigo-400" viewBox="0 0 25 25"
+                                                 fill="currentColor"
+                                                 aria-hidden="true">
+                                                <path d="M3 9H9.5M21 9H9.5M9.5 9L14.5 4M14.5 4H17.8C18.8467 4 19.4044 4 19.8221 4.1779M14.5 4H6.2C5.07989 4 4.51984 4 4.09202 4.21799C3.71569 4.40973 3.40973 4.71569 3.21799 5.09202C3 5.51984 3 6.07989 3 7.2V16.8C3 17.9201 3 18.4802 3.21799 18.908C3.40973 19.2843 3.71569 19.5903 4.09202 19.782C4.51984 20 5.07989 20 6.2 20H17.8C18.9201 20 19.4802 20 19.908 19.782C20.2843 19.5903 20.5903 19.2843 20.782 18.908C21 18.4802 21 17.9201 21 16.8V7.2C21 6.07989 21 5.51984 20.782 5.09202C20.5903 4.71569 20.2843 4.40973 19.908 4.21799C19.88 4.20371 19.8514 4.19037 19.8221 4.1779M9 4L4 9M15 9.00015L19.8221 4.1779M15 14.5L10 17.5V11.5L15 14.5Z"
+                                                      stroke="#000000" stroke-width="2" stroke-linejoin="round">
+                                                </path>
+                                            </svg>
+                                            Interfície "User-Friendly"
+                                        </dt>
+                                        <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+                                            <p class="flex-auto">Navegueu sense esforç a través de la interfície
+                                                user-friendly de TeamFlick, amb
+                                                visualitzacions netes i un disseny intuïtiu per a una organització de
+                                                festes de visualització sense problemes.</p>
+                                            <p class="mt-6">
+                                                <a href="#" class="text-sm font-semibold leading-6 text-indigo-400">Més
+                                                    informació <span
+                                                            aria-hidden="true">→</span></a>
+                                            </p>
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </div>
                     </div>
-                  </div>
 
-                  <!--   FIN       FEATURES        Simple three column with small icons on dark-->
+                    <!--   FIN       FEATURES        Simple three column with small icons on dark-->
 
-<!--          CTA        With image tiles-->
+                    <!--          CTA        With image tiles-->
 
                   <img src="imatges/icona_focus.png" id="toggleButton" alt="Toggle Spotlight Effect"  width="80" height="80">
                   <div id="mySpotlightDiv" class="overflow-hidden bg-gray-900 py-32 spotlight relative">
@@ -854,84 +1066,86 @@
                           </div>
                         </div>
                         <!-- Centered bottom background image -->
-                        <div class="bg-center bg-no-repeat h-56 lg:w-full lg:max-w-lg lg:flex-none lg:absolute lg:top-28 lg:left-56 lg:right-0 lg:m-auto" style="background-image: url('imatges/CTA_background.jpeg'); border: 4px solid #ffffff;"></div>
+                        <div class="bg-center bg-no-repeat h-56 lg:w-full lg:max-w-lg lg:flex-none lg:absolute lg:top-28 lg:left-56 lg:right-0 lg:m-auto"
+                             style="background-image: url('imatges/CTA_background.jpeg'); border: 4px solid #ffffff;"></div>
                       </div>
+                        </div>
+                        <!-- Add the spotlight effect overlay -->
+                        <div class="absolute inset-0" id="spotlightOverlay"></div>
                     </div>
-                    <!-- Add the spotlight effect overlay -->
-                    <div class="absolute inset-0" id="spotlightOverlay"></div>
-                  </div>
 
 
+                    <!--     FIN     CTA        With image tiles-->
 
-                  <!--     FIN     CTA        With image tiles-->
+                    <!--AFEGIR FOOTER SECTION-->
 
-                  <!--AFEGIR FOOTER SECTION-->
+                    <footer class="bg-black">
+                        <div class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+                            <nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
+                                <div class="pb-6">
+                                    <a href="#serveis"
+                                       class="text-sm leading-6 text-white hover:text-green-600">Serveis</a>
+                                </div>
+                                <div class="pb-6">
+                                    <a href="#projectes" class="text-sm leading-6 text-white hover:text-green-600">Projectes</a>
+                                </div>
+                                <div class="pb-6">
+                                    <a href="#preus" class="text-sm leading-6 text-white hover:text-green-600">Preus</a>
+                                </div>
+                                <div class="pb-6">
+                                    <a href="#preguntes" class="text-sm leading-6 text-white hover:text-green-600">Preguntes
+                                        Freqüents</a>
+                                </div>
 
-                  <footer class="bg-black">
-                    <div class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
-                      <nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
-                        <div class="pb-6">
-                          <a href="#serveis" class="text-sm leading-6 text-white hover:text-green-600">Serveis</a>
+                            </nav>
+                            <div class="mt-10 flex justify-center space-x-10">
+                                <a href="#" class="text-gray-200 hover:text-green-600">
+                                    <span class="sr-only">Facebook</span>
+                                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                              d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                              clip-rule="evenodd"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-gray-200 hover:text-green-600">
+                                    <span class="sr-only">Instagram</span>
+                                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                              d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                              clip-rule="evenodd"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-gray-200 hover:text-green-600">
+                                    <span class="sr-only">Twitter</span>
+                                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-gray-200 hover:text-green-600">
+                                    <span class="sr-only">GitHub</span>
+                                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                              clip-rule="evenodd"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-gray-200 hover:text-green-600">
+                                    <span class="sr-only">YouTube</span>
+                                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                              d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z"
+                                              clip-rule="evenodd"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="mt-10 text-center text-xs leading-5 text-gray-500">&copy; 2020 Your Company, Inc.
+                                All rights
+                                reserved.</p>
                         </div>
-                        <div class="pb-6">
-                          <a href="#projectes" class="text-sm leading-6 text-white hover:text-green-600">Projectes</a>
-                        </div>
-                        <div class="pb-6">
-                          <a href="#preus" class="text-sm leading-6 text-white hover:text-green-600">Preus</a>
-                        </div>
-                        <div class="pb-6">
-                          <a href="#preguntes" class="text-sm leading-6 text-white hover:text-green-600">Preguntes Freqüents</a>
-                        </div>
+                    </footer>
 
-                      </nav>
-                      <div class="mt-10 flex justify-center space-x-10">
-                        <a href="#" class="text-gray-200 hover:text-green-600">
-                          <span class="sr-only">Facebook</span>
-                          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                                  clip-rule="evenodd"/>
-                          </svg>
-                        </a>
-                        <a href="#" class="text-gray-200 hover:text-green-600">
-                          <span class="sr-only">Instagram</span>
-                          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                  d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
-                                  clip-rule="evenodd"/>
-                          </svg>
-                        </a>
-                        <a href="#" class="text-gray-200 hover:text-green-600">
-                          <span class="sr-only">Twitter</span>
-                          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
-                          </svg>
-                        </a>
-                        <a href="#" class="text-gray-200 hover:text-green-600">
-                          <span class="sr-only">GitHub</span>
-                          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                                  clip-rule="evenodd"/>
-                          </svg>
-                        </a>
-                        <a href="#" class="text-gray-200 hover:text-green-600">
-                          <span class="sr-only">YouTube</span>
-                          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                  d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z"
-                                  clip-rule="evenodd"/>
-                          </svg>
-                        </a>
-                      </div>
-                      <p class="mt-10 text-center text-xs leading-5 text-gray-500">&copy; 2020 Your Company, Inc. All rights
-                        reserved.</p>
-                    </div>
-                  </footer>
-
-          <!--FIN FOOTER SECTION-->
-                </div>
-
+                    <!--FIN FOOTER SECTION-->
+            </div>
 
 
               <script src="main.js"></script>
@@ -940,3 +1154,6 @@
 </html>
 
 
+<script>
+    preguntes = false;
+</script>
