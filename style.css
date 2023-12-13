@@ -34,3 +34,57 @@
             rgba(0, 0, 0, 0.85) 200px
     );
 }
+
+
+ #toggleButton {
+     cursor: pointer;
+     transition: transform 0.3s ease;
+ }
+
+#toggleButton:hover {
+    transform: scale(1.1);
+}
+
+.neon-button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 18px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff0066;
+    border: 2px solid #ff0066;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #ff0066, 0 0 20px #ff0066, 0 0 30px #ff0066;
+    z-index: 2;
+}
+
+.neon-button:before,
+.neon-button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #ff0066, #ff0000);
+    animation: neonGlow 1.5s linear infinite alternate-reverse;
+}
+
+.neon-button:before {
+    left: 0;
+}
+
+.neon-button:after {
+    right: 0;
+}
+
+@keyframes neonGlow {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
