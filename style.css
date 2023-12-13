@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
     --cursor-x: 0;
     --cursor-y: 0;
@@ -35,3 +34,13 @@
             rgba(0, 0, 0, 0.85) 200px
     );
 }
+
+@font-face {
+    font-family: 'Afacad-Regular';
+    src: url('./fonts/Afacad/Afacad-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
