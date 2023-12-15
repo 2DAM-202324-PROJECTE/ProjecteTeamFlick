@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
 <head>
 
     <meta charset="UTF-8"/>
@@ -24,7 +24,7 @@
 <header class="bg-gradient-to-t from-gray-900 from-50% via-blue-450 via-70% to-blue-500 to-90%"
         x-data="{menuOpen: false}">
     <nav class="mx-auto flex max-w-10xl items-center justify-between pt-1.5 lg:px-8  " aria-label="Global">
-        <div class="flex lg:flex-1">
+        <div class="flex lg:flex-2">
             <a href="#" class="-m-.5 p-.5">
                 <span class="sr-only">TeamFlick</span>
                 <img class="h-20 w-auto pl-4" src="imatges/logo33.png" alt="">
@@ -41,15 +41,15 @@
                 </svg>
             </button>
         </div>
-        <div class="hidden lg:flex lg:gap-x-16 ">
-            <a href="#preus" class="text-sm font-semibold leading-6 text-white">Preus</a>
-                <a href="#FAQ" class="text-sm font-semibold leading-6 text-white">Preguntes freqüents</a>
-            <a href="#Nosaltres" class="text-sm font-semibold leading-6 text-white">Qui som?</a>
-            <a href="#Funcionalitats" class="text-sm font-semibold leading-6 text-white">Funcionalitats</a>
+        <div class="hidden lg:flex flex-auto justify-center lg:gap-x-28 ">
+            <a href="#Preus" class="text-xs font-semibold leading-6 text-white hover:underline" style="font-family: 'Montserrat', sans-serif">Preus</a>
+                <a href="#FAQ" class="text-xs font-semibold leading-6 text-white hover:underline" style="font-family: 'Montserrat', sans-serif">Preguntes freqüents</a>
+            <a href="#Nosaltres" class="text-xs font-semibold leading-6 text-white hover:underline" style="font-family: 'Montserrat', sans-serif">Qui som?</a>
+            <a href="#Funcionalitats" class="text-xs font-semibold leading-6 text-white hover:underline" style="font-family: 'Montserrat', sans-serif">Funcionalitats</a>
         </div>
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end ">
-            <a href="#" class=" pr-4 text-sm font-semibold leading-6 text-white">Inicia sessió<span
-                    aria-hidden="true">&rarr;</span></a>
+        <div class="hidden lg:flex lg:flex-2 lg:justify-end border border-white/40 ml-32 px-2 mx-auto rounded-full bg-white/40 mb-2">
+            <a href="#" class=" text-xs font-semibold leading-6 text-white mx-auto" style="font-family: 'Montserrat', sans-serif">Inicia sessió
+                <span class="p-2 " aria-hidden="true">&rarr;</span></a>
         </div>
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->
