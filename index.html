@@ -535,337 +535,35 @@
         <!--FI SECCIÓ DE PREUS -->
 
 
-                    <!-- FAQ section -->
+        <!--          CTA        With image tiles-->
 
+        <img src="imatges/icona_focus.png" id="toggleButton" alt="Toggle Spotlight Effect"  width="80" height="80">
+        <div id="mySpotlightDiv" class="overflow-hidden bg-gray-900 py-32 spotlight relative">
+            <div class="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
+                <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8 relative">
+                    <div class="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
+                        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Llums, càmera, acció!</h2>
+                        <p class="mt-6 text-lg leading-8 text-gray-300">Prepara't per a una experiència cinematogràfica com mai has viscut.</p>
+                        <div class="mt-10 flex">
+                            <a href="#" class="neon-button ml-2 text-lg">Descobreix el catàleg <span aria-hidden="true">&rarr;</span></a>
 
-                    <div id ="FAQ" class="pt-16" style="background-color: #111827; color: white;">
-                        <div class="space-y-6 divide-y divide-gray-900/10">
-                            <div class="my-24 max-w-7xl px-6 lg:px-8 ">
-                                <div class="mx-auto max-w-4xl divide-y divide-white">
-                                    <h2 class="text-3xl font-bold leading-10 text-center text-white" style="font-family: 'Montserrat', sans-serif">
-                                        Preguntes Freqüents</h2>
-                                    <dl class="mt-10 space-y-6 divide-y divide-gray-600/40">
-                                        <!-- Pregunta 1 -->
-                                        <div class="pt-6">
-                                            <dt>
-                                                <button type="button"
-                                                        class="flex w-full items-start justify-between text-left text-white"
-                                                        onclick="toggleFAQ('faq-1')">
-
-                                                    <span class="text-base font-semibold leading-7 text-white/70" style="font-family: 'Montserrat', sans-serif">
-                                                        Com puc començar a utilitzar TeamFlick ?</span>
-                                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                                         stroke-width="1.5" stroke="currentColor"
-                                                         aria-hidden="true">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                              d="M12 6v12m6-6H6"/>
-                                                    </svg>
-                                                </button>
-
-                                            </dt>
-                                            <dd id="faq-1" class="mt-2 pr-12 hidden text-sm" style="font-family: 'Montserrat', sans-serif">
-                                                Simplement registra't i gaudeix d'un període de prova gratuït. Després,
-                                                selecciona el pla que més s'adapti a les teves necessitats.
-                                            </dd>
-                                        </div>
-
-                                        <!-- Pregunta 2 -->
-                                        <div class="pt-6">
-                                            <dt>
-                                                <button type="button"
-                                                        class="flex w-full items-start justify-between text-left text-white"
-                                                        onclick="toggleFAQ('faq-2')">
-                                                    <span class="text-base font-semibold leading-7" style="font-family: 'Montserrat', sans-serif">
-                                                        Quin tipus de contingut està disponible?</span>
-                                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                                         stroke-width="1.5" stroke="currentColor"
-                                                         aria-hidden="true">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                              d="M12 6v12m6-6H6"/>
-                                                    </svg>
-                                                </button>
-                                            </dt>
-                                            <dd id="faq-2" class="mt-2 pr-12 hidden text-sm" style="font-family: 'Montserrat', sans-serif">
-                                                Oferim una àmplia varietat de pel·lícules, sèries, documentals i
-                                                contingut per a nens de diferents gèneres i països.
-                                            </dd>
-                                        </div>
-                                        <!-- Pregunta 3 -->
-                                        <div class="pt-6">
-                                            <dt>
-                                                <button type="button"
-                                                        class="flex w-full items-start justify-between text-left text-white"
-                                                        onclick="toggleFAQ('faq-3')">
-                                                    <span class="text-base font-semibold leading-7 text-white/70" style="font-family: 'Montserrat', sans-serif">
-                                                        Es pot cancel·lar la subscripció en qualsevol moment?</span>
-                                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                                         stroke-width="1.5" stroke="currentColor"
-                                                         aria-hidden="true">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                              d="M12 6v12m6-6H6"/>
-                                                    </svg>
-                                                </button>
-                                            </dt>
-                                            <dd id="faq-3" class="mt-2 pr-12 hidden text-sm" style="font-family: 'Montserrat', sans-serif">
-                                                Sí, pots cancel·lar la teva subscripció en qualsevol moment sense cap
-                                                cost addicional.
-                                            </dd>
-                                        </div>
-
-                                        <!-- Pregunta 4 -->
-                                        <div class="pt-6">
-                                            <dt>
-                                                <button type="button"
-                                                        class="flex w-full items-start justify-between text-left text-white"
-                                                        onclick="toggleFAQ('faq-4')">
-                                                    <span class="text-base font-semibold leading-7" style="font-family: 'Montserrat', sans-serif">
-                                                        Es poden veure pel·lícules i sèries offline?</span>
-                                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                                         stroke-width="1.5" stroke="currentColor"
-                                                         aria-hidden="true">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                              d="M12 6v12m6-6H6"/>
-                                                    </svg>
-                                                </button>
-                                            </dt>
-                                            <dd id="faq-4" class="mt-2 pr-12 hidden text-sm" style="font-family: 'Montserrat', sans-serif">
-                                                Sí, pots descarregar el teu contingut preferit i veure'l sense connexió
-                                                a qualsevol moment i lloc.
-                                            </dd>
-                                        </div>
-
-                                        <!-- Pregunta 5 -->
-                                        <div class="pt-6">
-                                            <dt>
-                                                <button type="button"
-                                                        class="flex w-full items-start justify-between text-left text-white"
-                                                        onclick="toggleFAQ('faq-5')">
-                                                    <span class="text-base font-semibold leading-7 text-white/70" style="font-family: 'Montserrat', sans-serif">
-                                                        Com puc gestionar els controls parentals?</span>
-                                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                                         stroke-width="1.5" stroke="currentColor"
-                                                         aria-hidden="true">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                              d="M12 6v12m6-6H6"/>
-                                                    </svg>
-                                                </button>
-                                            </dt>
-                                            <dd id="faq-5" class="mt-2 pr-12 hidden text-sm" style="font-family: 'Montserrat', sans-serif">
-                                                Oferim diverses opcions de control parental per assegurar un entorn
-                                                segur per als menors, incloent la creació de perfils per a nens i
-                                                bloqueig de contingut segons l'edat.
-                                            </dd>
-                                        </div>
-
-                                        <!-- Pregunta 6 -->
-                                        <div class="pt-6">
-                                            <dt>
-                                                <button type="button"
-                                                        class="flex w-full items-start justify-between text-left text-white"
-                                                        onclick="toggleFAQ('faq-6')">
-                                                    <span class="text-base font-semibold leading-7" style="font-family: 'Montserrat', sans-serif">
-                                                        Quants dispositius es poden utilitzar simultàniament?</span>
-                                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                                         stroke-width="1.5" stroke="currentColor"
-                                                         aria-hidden="true">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                              d="M12 6v12m6-6H6"/>
-                                                    </svg>
-                                                </button>
-                                            </dt>
-                                            <dd id="faq-6" class="mt-2 pr-12 hidden text-sm" style="font-family: 'Montserrat', sans-serif">
-                                                Això depèn del pla de subscripció que tinguis. Els nostres plans varien
-                                                en el nombre de dispositius compatibles per streaming simultani.
-                                            </dd>
-                                        </div>
-
-                                        <!-- Pregunta 7 -->
-                                        <div class="pt-6">
-                                            <dt>
-                                                <button type="button"
-                                                        class="flex w-full items-start justify-between text-left text-white"
-                                                        onclick="toggleFAQ('faq-7')">
-                                                    <span class="text-base font-semibold leading-7 text-white/70" style="font-family: 'Montserrat', sans-serif">
-                                                        Què passa si experimento problemes tècnics o errors?</span>
-                                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                                         stroke-width="1.5" stroke="currentColor"
-                                                         aria-hidden="true">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                              d="M12 6v12m6-6H6"/>
-                                                    </svg>
-                                                </button>
-                                            </dt>
-                                            <dd id="faq-7" class="mt-2 pr-12 hidden text-sm" style="font-family: 'Montserrat', sans-serif">
-                                                El nostre equip de suport està disponible per ajudar-te amb qualsevol
-                                                problema tècnic o error que puguis experimentar. Contacta'ns a través de
-                                                la nostra pàgina de suport.
-                                            </dd>
-                                        </div>
-
-                                        <!-- Pregunta 8 -->
-                                        <div class="pt-6">
-                                            <dt>
-                                                <button type="button"
-                                                        class="flex w-full items-start justify-between text-left text-white"
-                                                        onclick="toggleFAQ('faq-8')">
-                                                    <span class="text-base font-semibold leading-7" style="font-family: 'Montserrat', sans-serif">
-                                                        Hi ha contingut en altres idiomes disponibles?</span>
-                                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                                         stroke-width="1.5" stroke="currentColor"
-                                                         aria-hidden="true">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                              d="M12 6v12m6-6H6"/>
-                                                    </svg>
-                                                </button>
-                                            </dt>
-                                            <dd id="faq-8" class="mt-2 pr-12 hidden text-sm" style="font-family: 'Montserrat', sans-serif">
-                                                Sí, oferim una àmplia varietat de contingut en diversos idiomes, així
-                                                com opcions de subtitulació i doblatge.
-                                            </dd>
-                                        </div>
-
-                                        <!-- Pregunta 9 -->
-                                        <div class="pt-6">
-                                            <dt>
-                                                <button type="button"
-                                                        class="flex w-full items-start justify-between text-left text-white"
-                                                        onclick="toggleFAQ('faq-9')">
-                                                    <span class="text-base font-semibold leading-7 text-white/70" style="font-family: 'Montserrat', sans-serif">
-                                                        Puc canviar el meu pla de subscripció?</span>
-                                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                                         stroke-width="1.5" stroke="currentColor"
-                                                         aria-hidden="true">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                              d="M12 6v12m6-6H6"/>
-                                                    </svg>
-                                                </button>
-                                            </dt>
-                                            <dd id="faq-9" class="mt-2 pr-12 hidden text-sm" style="font-family: 'Montserrat', sans-serif">
-                                                Sí, pots canviar el teu pla de subscripció en qualsevol moment a través
-                                                de la configuració del teu compte.
-                                            </dd>
-                                        </div>
-                                    </dl>
-                                </div>
-                            </div>
                         </div>
                     </div>
-
-                    <!-- JavaScript per a funcionalitat d'expandir/col·lapsar -->
-                    <script>
-                        function toggleFAQ(faqId) {
-                            var element = document.getElementById(faqId);
-                            element.classList.toggle("hidden");
-                        }
-                    </script>
-                    <!-- FIN VISTAS RÁPIDAS DEL PRODUCTO CON SELECTOR DE COLOR Y TALLA-->
-
-
-                    <!--       EQUIP    Dark version with large images-->
+                    <!-- Centered bottom background image -->
+                    <div class="bg-center bg-no-repeat h-56 lg:w-full lg:max-w-lg lg:flex-none lg:absolute lg:top-28 lg:left-56 lg:right-0 lg:m-auto"
+                         style="background-image: url('imatges/CTA_background.jpeg'); border: 4px solid #ffffff;"></div>
+                </div>
+            </div>
+            <!-- Add the spotlight effect overlay -->
+            <div class="absolute inset-0" id="spotlightOverlay"></div>
+        </div>
 
 
-                    <div id="Nosaltres" class="bg-gray-900 py-24 sm:py-32">
-                        <div class="mx-auto max-w-7xl px-6 text-center lg:px-8">
-                            <div class="mx-auto max-w-2xl">
-                                <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl" style="font-family: 'Montserrat', sans-serif">
-                                    Qui som?</h2>
-                                <p class="mt-4 text-lg leading-8 text-gray-400" style="font-family: 'Montserrat', sans-serif">
-                                    Som un grup dinàmic de persones apassionades pel que fem.</p>
-                            </div>
-                            <ul role="list" class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
-                                <!-- Person 1 -->
-                                <li class="rounded-2xl bg-gray-800 px-8 py-10 relative" style="background-image: url('imatges/team_back2.jpeg'); background-size: cover;">
-                                    <img class="mx-auto h-48 w-48 rounded-full md:h-56 md:w-56 border-4 border-white mb-20" src="imatges/team1.jpeg" alt="">
-                                    <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4">
-                                        <h3 class="text-base font-semibold leading-7 tracking-tight" style="font-family: 'Montserrat', sans-serif">
-                                            Sergio Bertomeu</h3>
-                                        <p class="text-sm leading-6 text-gray-400" style="font-family: 'Montserrat', sans-serif">
-                                            PLACEHOLDER</p>
-                                        <ul role="list" class="mt-2 flex justify-center gap-x-6">
-                                            <li>
-                                                <a href="#" class="text-gray-400 hover:text-gray-300">
-                                                    <span class="sr-only">Twitter</span>
-                                                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                                        <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                                                    </svg>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="text-gray-400 hover:text-gray-300">
-                                                    <span class="sr-only">LinkedIn</span>
-                                                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                                        <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
-                                                    </svg>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <!-- Person 2 -->
-                                <li class="rounded-2xl bg-gray-800 px-8 py-10 relative " style="background-image: url('imatges/team_back2.jpeg'); background-size: cover;">
-                                    <img class="mx-auto h-48 w-48 rounded-full md:h-56 md:w-56 border-4 border-white mb-20" src="imatges/team2.jpeg" alt="">
-                                    <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4">
-                                        <h3 class="text-base font-semibold leading-7 tracking-tight" style="font-family: 'Montserrat', sans-serif">
-                                            Sara Bogdan</h3>
-                                        <p class="text-sm leading-6 text-gray-400" style="font-family: 'Montserrat', sans-serif">
-                                            PLACEHOLDER</p>
-                                        <ul role="list" class="mt-2 flex justify-center gap-x-6">
-                                            <li>
-                                                <a href="#" class="text-gray-400 hover:text-gray-300">
-                                                    <span class="sr-only">Twitter</span>
-                                                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                                        <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                                                    </svg>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="text-gray-400 hover:text-gray-300">
-                                                    <span class="sr-only">LinkedIn</span>
-                                                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                                        <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
-                                                    </svg>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <!-- Person 3 -->
-                                <li class="rounded-2xl bg-gray-800 px-8 py-10 relative" style="background-image: url('imatges/team_back2.jpeg'); background-size: cover;">
-                                    <img class="mx-auto h-48 w-48 rounded-full md:h-56 md:w-56 border-4 border-white mb-20" src="imatges/team3.jpeg" alt="">
-                                    <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4">
-                                        <h3 class="text-base font-semibold leading-7 tracking-tight" style="font-family: 'Montserrat', sans-serif">
-                                            Norbert Falcó</h3>
-                                        <p class="text-sm leading-6 text-gray-400" style="font-family: 'Montserrat', sans-serif">
-                                            PLACEHOLDER</p>
-                                        <ul role="list" class="mt-2 flex justify-center gap-x-6">
-                                            <li>
-                                                <a href="#" class="text-gray-400 hover:text-gray-300">
-                                                    <span class="sr-only">Twitter</span>
-                                                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                                        <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                                                    </svg>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="text-gray-400 hover:text-gray-300">
-                                                    <span class="sr-only">LinkedIn</span>
-                                                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                                        <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
-                                                    </svg>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!--   FIN    EQUIP    Dark version with large images-->
+        <!--     FIN     CTA        With image tiles-->
 
 
 
-                    <!--          FEATURES        Simple three column with small icons on dark-->
+        <!--          FEATURES        Simple three column with small icons on dark-->
 
                     <div id="Funcionalitats" class="bg-gray-900 py-24 sm:py-32">
                         <div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -984,33 +682,339 @@
 
                     <!--   FIN       FEATURES        Simple three column with small icons on dark-->
 
-                    <!--          CTA        With image tiles-->
 
-                  <img src="imatges/icona_focus.png" id="toggleButton" alt="Toggle Spotlight Effect"  width="80" height="80">
-                  <div id="mySpotlightDiv" class="overflow-hidden bg-gray-900 py-32 spotlight relative">
-                    <div class="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
-                      <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8 relative">
-                        <div class="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
-                          <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Llums, càmera, acció!</h2>
-                          <p class="mt-6 text-lg leading-8 text-gray-300">Prepara't per a una experiència cinematogràfica com mai has viscut.</p>
-                          <div class="mt-10 flex">
-                            <a href="#" class="neon-button ml-2 text-lg">Descobreix el catàleg <span aria-hidden="true">&rarr;</span></a>
+        <!-- FAQ section -->
 
-                          </div>
-                        </div>
-                        <!-- Centered bottom background image -->
-                        <div class="bg-center bg-no-repeat h-56 lg:w-full lg:max-w-lg lg:flex-none lg:absolute lg:top-28 lg:left-56 lg:right-0 lg:m-auto"
-                             style="background-image: url('imatges/CTA_background.jpeg'); border: 4px solid #ffffff;"></div>
-                      </div>
-                        </div>
-                        <!-- Add the spotlight effect overlay -->
-                        <div class="absolute inset-0" id="spotlightOverlay"></div>
+
+        <div id ="FAQ" class="pt-16" style="background-color: #111827; color: white;">
+            <div class="space-y-6 divide-y divide-gray-900/10">
+                <div class="my-24 max-w-7xl px-6 lg:px-8 ">
+                    <div class="mx-auto max-w-4xl divide-y divide-white">
+                        <h2 class="text-3xl font-bold leading-10 text-center text-white" style="font-family: 'Montserrat', sans-serif">
+                            Preguntes Freqüents</h2>
+                        <dl class="mt-10 space-y-6 divide-y divide-gray-600/40">
+                            <!-- Pregunta 1 -->
+                            <div class="pt-6">
+                                <dt>
+                                    <button type="button"
+                                            class="flex w-full items-start justify-between text-left text-white"
+                                            onclick="toggleFAQ('faq-1')">
+
+                                                    <span class="text-base font-semibold leading-7 text-white/70" style="font-family: 'Montserrat', sans-serif">
+                                                        Com puc començar a utilitzar TeamFlick ?</span>
+                                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                             stroke-width="1.5" stroke="currentColor"
+                                             aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                  d="M12 6v12m6-6H6"/>
+                                        </svg>
+                                    </button>
+
+                                </dt>
+                                <dd id="faq-1" class="mt-2 pr-12 hidden text-sm" style="font-family: 'Montserrat', sans-serif">
+                                    Simplement registra't i gaudeix d'un període de prova gratuït. Després,
+                                    selecciona el pla que més s'adapti a les teves necessitats.
+                                </dd>
+                            </div>
+
+                            <!-- Pregunta 2 -->
+                            <div class="pt-6">
+                                <dt>
+                                    <button type="button"
+                                            class="flex w-full items-start justify-between text-left text-white"
+                                            onclick="toggleFAQ('faq-2')">
+                                                    <span class="text-base font-semibold leading-7" style="font-family: 'Montserrat', sans-serif">
+                                                        Quin tipus de contingut està disponible?</span>
+                                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                             stroke-width="1.5" stroke="currentColor"
+                                             aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                  d="M12 6v12m6-6H6"/>
+                                        </svg>
+                                    </button>
+                                </dt>
+                                <dd id="faq-2" class="mt-2 pr-12 hidden text-sm" style="font-family: 'Montserrat', sans-serif">
+                                    Oferim una àmplia varietat de pel·lícules, sèries, documentals i
+                                    contingut per a nens de diferents gèneres i països.
+                                </dd>
+                            </div>
+                            <!-- Pregunta 3 -->
+                            <div class="pt-6">
+                                <dt>
+                                    <button type="button"
+                                            class="flex w-full items-start justify-between text-left text-white"
+                                            onclick="toggleFAQ('faq-3')">
+                                                    <span class="text-base font-semibold leading-7 text-white/70" style="font-family: 'Montserrat', sans-serif">
+                                                        Es pot cancel·lar la subscripció en qualsevol moment?</span>
+                                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                             stroke-width="1.5" stroke="currentColor"
+                                             aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                  d="M12 6v12m6-6H6"/>
+                                        </svg>
+                                    </button>
+                                </dt>
+                                <dd id="faq-3" class="mt-2 pr-12 hidden text-sm" style="font-family: 'Montserrat', sans-serif">
+                                    Sí, pots cancel·lar la teva subscripció en qualsevol moment sense cap
+                                    cost addicional.
+                                </dd>
+                            </div>
+
+                            <!-- Pregunta 4 -->
+                            <div class="pt-6">
+                                <dt>
+                                    <button type="button"
+                                            class="flex w-full items-start justify-between text-left text-white"
+                                            onclick="toggleFAQ('faq-4')">
+                                                    <span class="text-base font-semibold leading-7" style="font-family: 'Montserrat', sans-serif">
+                                                        Es poden veure pel·lícules i sèries offline?</span>
+                                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                             stroke-width="1.5" stroke="currentColor"
+                                             aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                  d="M12 6v12m6-6H6"/>
+                                        </svg>
+                                    </button>
+                                </dt>
+                                <dd id="faq-4" class="mt-2 pr-12 hidden text-sm" style="font-family: 'Montserrat', sans-serif">
+                                    Sí, pots descarregar el teu contingut preferit i veure'l sense connexió
+                                    a qualsevol moment i lloc.
+                                </dd>
+                            </div>
+
+                            <!-- Pregunta 5 -->
+                            <div class="pt-6">
+                                <dt>
+                                    <button type="button"
+                                            class="flex w-full items-start justify-between text-left text-white"
+                                            onclick="toggleFAQ('faq-5')">
+                                                    <span class="text-base font-semibold leading-7 text-white/70" style="font-family: 'Montserrat', sans-serif">
+                                                        Com puc gestionar els controls parentals?</span>
+                                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                             stroke-width="1.5" stroke="currentColor"
+                                             aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                  d="M12 6v12m6-6H6"/>
+                                        </svg>
+                                    </button>
+                                </dt>
+                                <dd id="faq-5" class="mt-2 pr-12 hidden text-sm" style="font-family: 'Montserrat', sans-serif">
+                                    Oferim diverses opcions de control parental per assegurar un entorn
+                                    segur per als menors, incloent la creació de perfils per a nens i
+                                    bloqueig de contingut segons l'edat.
+                                </dd>
+                            </div>
+
+                            <!-- Pregunta 6 -->
+                            <div class="pt-6">
+                                <dt>
+                                    <button type="button"
+                                            class="flex w-full items-start justify-between text-left text-white"
+                                            onclick="toggleFAQ('faq-6')">
+                                                    <span class="text-base font-semibold leading-7" style="font-family: 'Montserrat', sans-serif">
+                                                        Quants dispositius es poden utilitzar simultàniament?</span>
+                                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                             stroke-width="1.5" stroke="currentColor"
+                                             aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                  d="M12 6v12m6-6H6"/>
+                                        </svg>
+                                    </button>
+                                </dt>
+                                <dd id="faq-6" class="mt-2 pr-12 hidden text-sm" style="font-family: 'Montserrat', sans-serif">
+                                    Això depèn del pla de subscripció que tinguis. Els nostres plans varien
+                                    en el nombre de dispositius compatibles per streaming simultani.
+                                </dd>
+                            </div>
+
+                            <!-- Pregunta 7 -->
+                            <div class="pt-6">
+                                <dt>
+                                    <button type="button"
+                                            class="flex w-full items-start justify-between text-left text-white"
+                                            onclick="toggleFAQ('faq-7')">
+                                                    <span class="text-base font-semibold leading-7 text-white/70" style="font-family: 'Montserrat', sans-serif">
+                                                        Què passa si experimento problemes tècnics o errors?</span>
+                                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                             stroke-width="1.5" stroke="currentColor"
+                                             aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                  d="M12 6v12m6-6H6"/>
+                                        </svg>
+                                    </button>
+                                </dt>
+                                <dd id="faq-7" class="mt-2 pr-12 hidden text-sm" style="font-family: 'Montserrat', sans-serif">
+                                    El nostre equip de suport està disponible per ajudar-te amb qualsevol
+                                    problema tècnic o error que puguis experimentar. Contacta'ns a través de
+                                    la nostra pàgina de suport.
+                                </dd>
+                            </div>
+
+                            <!-- Pregunta 8 -->
+                            <div class="pt-6">
+                                <dt>
+                                    <button type="button"
+                                            class="flex w-full items-start justify-between text-left text-white"
+                                            onclick="toggleFAQ('faq-8')">
+                                                    <span class="text-base font-semibold leading-7" style="font-family: 'Montserrat', sans-serif">
+                                                        Hi ha contingut en altres idiomes disponibles?</span>
+                                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                             stroke-width="1.5" stroke="currentColor"
+                                             aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                  d="M12 6v12m6-6H6"/>
+                                        </svg>
+                                    </button>
+                                </dt>
+                                <dd id="faq-8" class="mt-2 pr-12 hidden text-sm" style="font-family: 'Montserrat', sans-serif">
+                                    Sí, oferim una àmplia varietat de contingut en diversos idiomes, així
+                                    com opcions de subtitulació i doblatge.
+                                </dd>
+                            </div>
+
+                            <!-- Pregunta 9 -->
+                            <div class="pt-6">
+                                <dt>
+                                    <button type="button"
+                                            class="flex w-full items-start justify-between text-left text-white"
+                                            onclick="toggleFAQ('faq-9')">
+                                                    <span class="text-base font-semibold leading-7 text-white/70" style="font-family: 'Montserrat', sans-serif">
+                                                        Puc canviar el meu pla de subscripció?</span>
+                                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                             stroke-width="1.5" stroke="currentColor"
+                                             aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                  d="M12 6v12m6-6H6"/>
+                                        </svg>
+                                    </button>
+                                </dt>
+                                <dd id="faq-9" class="mt-2 pr-12 hidden text-sm" style="font-family: 'Montserrat', sans-serif">
+                                    Sí, pots canviar el teu pla de subscripció en qualsevol moment a través
+                                    de la configuració del teu compte.
+                                </dd>
+                            </div>
+                        </dl>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript per a funcionalitat d'expandir/col·lapsar -->
+        <script>
+            function toggleFAQ(faqId) {
+                var element = document.getElementById(faqId);
+                element.classList.toggle("hidden");
+            }
+        </script>
+        <!-- FIN VISTAS RÁPIDAS DEL PRODUCTO CON SELECTOR DE COLOR Y TALLA-->
 
 
-                    <!--     FIN     CTA        With image tiles-->
 
-                    <!--AFEGIR FOOTER SECTION-->
+        <!--       EQUIP    Dark version with large images-->
+
+
+        <div id="Nosaltres" class="bg-gray-900 py-24 sm:py-32">
+            <div class="mx-auto max-w-7xl px-6 text-center lg:px-8">
+                <div class="mx-auto max-w-2xl">
+                    <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl" style="font-family: 'Montserrat', sans-serif">
+                        Qui som?</h2>
+                    <p class="mt-4 text-lg leading-8 text-gray-400" style="font-family: 'Montserrat', sans-serif">
+                        Som un grup dinàmic de persones apassionades pel que fem.</p>
+                </div>
+                <ul role="list" class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
+                    <!-- Person 1 -->
+                    <li class="rounded-2xl bg-gray-800 px-8 py-10 relative" style="background-image: url('imatges/team_back2.jpeg'); background-size: cover;">
+                        <img class="mx-auto h-48 w-48 rounded-full md:h-56 md:w-56 border-4 border-white mb-20" src="imatges/team1.jpeg" alt="">
+                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4">
+                            <h3 class="text-base font-semibold leading-7 tracking-tight" style="font-family: 'Montserrat', sans-serif">
+                                Sergio Bertomeu</h3>
+                            <p class="text-sm leading-6 text-gray-400" style="font-family: 'Montserrat', sans-serif">
+                                PLACEHOLDER</p>
+                            <ul role="list" class="mt-2 flex justify-center gap-x-6">
+                                <li>
+                                    <a href="#" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">LinkedIn</span>
+                                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- Person 2 -->
+                    <li class="rounded-2xl bg-gray-800 px-8 py-10 relative " style="background-image: url('imatges/team_back2.jpeg'); background-size: cover;">
+                        <img class="mx-auto h-48 w-48 rounded-full md:h-56 md:w-56 border-4 border-white mb-20" src="imatges/team2.jpeg" alt="">
+                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4">
+                            <h3 class="text-base font-semibold leading-7 tracking-tight" style="font-family: 'Montserrat', sans-serif">
+                                Sara Bogdan</h3>
+                            <p class="text-sm leading-6 text-gray-400" style="font-family: 'Montserrat', sans-serif">
+                                PLACEHOLDER</p>
+                            <ul role="list" class="mt-2 flex justify-center gap-x-6">
+                                <li>
+                                    <a href="#" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">LinkedIn</span>
+                                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- Person 3 -->
+                    <li class="rounded-2xl bg-gray-800 px-8 py-10 relative" style="background-image: url('imatges/team_back2.jpeg'); background-size: cover;">
+                        <img class="mx-auto h-48 w-48 rounded-full md:h-56 md:w-56 border-4 border-white mb-20" src="imatges/team3.jpeg" alt="">
+                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4">
+                            <h3 class="text-base font-semibold leading-7 tracking-tight" style="font-family: 'Montserrat', sans-serif">
+                                Norbert Falcó</h3>
+                            <p class="text-sm leading-6 text-gray-400" style="font-family: 'Montserrat', sans-serif">
+                                PLACEHOLDER</p>
+                            <ul role="list" class="mt-2 flex justify-center gap-x-6">
+                                <li>
+                                    <a href="#" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-gray-400 hover:text-gray-300">
+                                        <span class="sr-only">LinkedIn</span>
+                                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--   FIN    EQUIP    Dark version with large images-->
+
+
+
+        <!--AFEGIR FOOTER SECTION-->
 
                     <footer class="bg-black">
                         <div class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
