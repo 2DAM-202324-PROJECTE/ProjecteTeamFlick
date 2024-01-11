@@ -1,0 +1,236 @@
+<!doctype html>
+<html class="scroll-smooth" lang="en" style="font-family: 'Montserrat', sans-serif">
+<head>
+
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="style.css" rel="stylesheet">
+    <!-- Enllaç a CSS de Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/>
+    <!-- Enllaç a JavaScript de Swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <title>TeamFlick</title>
+</head>
+
+<body>
+<script type="module" src="/main.js"></script>
+<!--  HEADER-->
+
+
+<header class="bg-gradient-to-t from-gray-900 from-10% via-blue-450 via-50% to-blue-500 to-50% pb-6"
+        x-data="{menuOpen: false}">
+    <nav class="mx-auto flex max-w-10xl items-center justify-between pt-1.5 lg:px-8  " aria-label="Global">
+        <div class="flex lg:flex-2">
+            <a href="#" class="-m-.5 p-.5">
+                <span class="sr-only">TeamFlick</span>
+                <img class="h-20 w-auto pl-4" src="imatges/logo33.png" alt="">
+            </a>
+        </div>
+        <div class="flex lg:hidden ">
+            <button @click="menuOpen=true" type="button"
+                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400">
+                <span class="sr-only">Open main menu</span>
+                <svg class="h-6 w-6 m-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                     aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                </svg>
+            </button>
+        </div>
+        <div class="hidden lg:flex flex-auto justify-center lg:gap-x-28 ">
+            <a href="Preus" class="text-xs font-semibold leading-6 text-white hover:underline" style="font-family: 'Montserrat', sans-serif">Preus</a>
+            <a href="FAQ" class="text-xs font-semibold leading-6 text-white hover:underline" style="font-family: 'Montserrat', sans-serif">Preguntes freqüents</a>
+            <a href="Nosaltres" class="text-xs font-semibold leading-6 text-white hover:underline" style="font-family: 'Montserrat', sans-serif">Qui som?</a>
+            <a href="Funcionalitats" class="text-xs font-semibold leading-6 text-white hover:underline" style="font-family: 'Montserrat', sans-serif">Funcionalitats</a>
+        </div>
+        <div class="hidden lg:flex lg:flex-2 lg:justify-end border border-white/40 ml-32 px-2 mx-auto rounded-full bg-white/40 mb-2">
+            <a href="#" class=" text-xs font-semibold leading-6 text-white mx-auto" style="font-family: 'Montserrat', sans-serif">Inicia sessió
+                <span class="p-2 " aria-hidden="true">&rarr;</span></a>
+        </div>
+    </nav>
+    <!-- Mobile menu, show/hide based on menu open state. -->
+    <div x-show="menuOpen" class="lg:hidden" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-10 "></div>
+        <div class="fixed inset-y-0 right-0 z-10 w-full bg-gradient-to-t from-gray-900 via-gray-900 50%, blue-450 50% to-blue-500 overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
+
+
+            <div class="flex items-center justify-between">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">TeamFlick</span>
+                    <img class="h-20 w-auto  " src="imatges/logo33.png" alt="">
+                </a>
+                <button @click="menuOpen=false" type="button" class="-m-2.5 rounded-md p-2.5  ">
+                    <span class="sr-only">Close menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                         aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-gray-500/25">
+                    <div class="space-y-2 py-6">
+                        <a href="Preus"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Preus</a>
+                        <a href="FAQ"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Preguntes freqüents</a>
+                        <a href="Nosaltres"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Qui som?</a>
+                        <a href="Funcionalitats"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Funcionalitats</a>
+                    </div>
+                    <div class="py-6">
+                        <a href="#"
+                           class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-800">Inicia sessió
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<!-- wp:paragraph -->
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;"><strong style="color: #000000; box-sizing: border-box; margin-bottom: 0px; font-weight: bold;">Declaració d’accessibilitat</p>
+<p style="margin: 0px; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: 'Open Sans', Arial, sans-serif; vertical-align: baseline; color: #666666; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">TeamFlick s’ha compromès a fer accessible el vostre lloc web, de conformitat amb el Reial decret 1112/2018, de 7 de setembre, sobre accessibilitat dels llocs web i aplicacions per a dispositius mòbils del sector públic.</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Aquesta declaració d’accessibilitat s’aplica al lloc web https://www.TeamFlick.com:</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;"><strong style="color: #000000; box-sizing: border-box; margin-bottom: 0px; font-weight: bold;">Situació de compliment</strong></p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Aquest lloc web és parcialment conforme al RD 1112/2018 degut a les excepcions i la manca de conformitat dels aspectes que s’indiquen al següent punt.</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Contingut no accessible</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">El contingut que es recull a continuació no és accessible pel següent:</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Manca de conformitat amb el RD 1112/2018</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Podrien existir documents ofimàtics en PDF i altres formats publicats amb posterioritat al 20 de setembre del 2018 que no compleixin íntegrament els requisits d’accessibilitat. Podeu sol·licitar els documents completament accessibles des del formulari de contacte per formalitzar queixes i consultes.</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Podrien existir errors de codi puntuals dedició en alguna pàgina web. [4.1.1 Processament]</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;"><strong style="color: #000000; box-sizing: border-box; margin-bottom: 0px; font-weight: bold;">Càrrega desproporcionada</strong></p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">No s’aplica.</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">El contingut no entra dins de l’àmbit de la legislació aplicable</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Podrien existir fitxers ofimàtics en PDF o altres formats publicats abans del 20 de setembre de 2018 que no compleixin íntegrament tots els requisits d’accessibilitat. Tot i que s’ha procurat que la majoria sí que ho compleixin.</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Preparació per a la següent declaració d’accessibilitat</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Aquesta declaració va ser preparada el 20 de febrer de 2023</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">El mètode emprat per preparar la declaració ha estat una autoavaluació duta a terme pel mateix organisme.</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;"><strong style="color: #000000; box-sizing: border-box; margin-bottom: 0px; font-weight: bold;">Observacions i dades de contacte</strong></p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Podeu realitzar comunicacions sobre requisits d’accessibilitat (article 10.2.a del RD 1112/2018) com ara:</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Informar sobre qualsevol possible incompliment per part d’aquest lloc web</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Transmetre altres dificultats d’accés al contingut</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Formular qualsevol altra consulta o suggeriment de millora relativa a l’accessibilitat del lloc web</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">a través del formulari de contacte d’aquest lloc web o mitjançant el número de telèfon +34 555 55 55 55.</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;"><strong style="color: #000000; box-sizing: border-box; margin-bottom: 0px; font-weight: bold;">Pots presentar:</strong></p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Queixa relativa al compliment dels requisits del RD 1112/2018 o</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Sol·licitud d’informació accessible relativa a:</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Continguts que estan exclosos de l’àmbit d’aplicació del RD 1112/2018 segons el que estableix l’article 3, apartat 4</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Continguts que estan exempts del compliment dels requisits d’accessibilitat per imposar una càrrega desproporcionada</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">A la Sol·licitud d’informació accessible, cal concretar, amb tota claredat, els fets, les raons i la petició que permetin constatar que es tracta d’una sol·licitud raonable i legítima.</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Les queixes i reclamacions sobre informació accessible es realitzaran a través del formulari de contacte (https://www.lescasetesdelsiaios.com/contacte), i seran rebudes i tractades.</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;"><strong style="color: #000000; box-sizing: border-box; margin-bottom: 0px; font-weight: bold;">Contingut opcional</strong></p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Aquest portal està dissenyat per canviar la mida del text i el color, així com el fons de la pàgina mitjançant les opcions de configuració estàndard dels navegadors.</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Si voleu canviar la mida de lletra del text als principals navegadors gràfics utilitzeu els menús següents:</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Internet Explorer, Mozilla i Firefox: Veure &gt; Mida del text</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Opera: Veure &gt; Zoom</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Safari: Veure &gt; Fer el text més gran</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Chrome: Controla la pàgina actual &gt; Mida del text</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Per modificar la mida de tot a la pàgina:</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Ctrl + + per augmentar-ho</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Ctrl + – per disminuir-ho</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Ctrl+0 restaura la mida original del text</p>
+<p style="margin: 0px 0px 1.25rem; padding: 1em 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 14px; font-family: Poppins, sans-serif; vertical-align: baseline; color: #777777; line-height: 1.71429; box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Si el que voleu és anul·lar el full d’estils o modificar el color del text, podeu consultar la pàgina How to Change Text Size o Colors de la WAI, que es pot llegir traduït a l’espanyol a Com canviar la mida del text o colors?</p>
+<!-- /wp:paragraph -->
+
+
+
+<!--AFEGIR FOOTER SECTION-->
+
+<footer class="bg-black">
+    <div class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+        <nav class="-mb-8 columns-2 sm:flex sm:justify-center sm:space-x-52" aria-label="Footer">
+            <!-- First Column: Services -->
+            <div>
+                <div class="pb-6">
+                    <a href="#serveis" class="text-sm leading-6 text-white hover:text-green-600">Serveis</a>
+                </div>
+                <div class="pb-6">
+                    <a href="#projectes" class="text-sm leading-6 text-white hover:text-green-600">Projectes</a>
+                </div>
+                <div class="pb-6">
+                    <a href="#preus" class="text-sm leading-6 text-white hover:text-green-600">Preus</a>
+                </div>
+                <div class="pb-6">
+                    <a href="#preguntes" class="text-sm leading-6 text-white hover:text-green-600">Preguntes Freqüents</a>
+                </div>
+            </div>
+
+            <!-- Second Column: FAQs and Others -->
+            <div>
+
+                <div class="pb-6">
+                    <a href="Políticacookies" class="text-sm leading-6 text-white hover:text-green-600">Política de cookies</a>
+                </div>
+                <div class="pb-6">
+                    <a href="Políticaprivacitat" class="text-sm leading-6 text-white hover:text-green-600">Política de privacitat</a>
+                </div>
+                <div class="pb-6">
+                    <a href="Accesibilitat" class="text-sm leading-6 text-white hover:text-green-600">Accesibilitat</a>
+                </div>
+                <div class="pb-6">
+                    <a href="Contacte" class="text-sm leading-6 text-white hover:text-green-600">Contacte</a>
+                </div>
+            </div>
+        </nav>
+        <div class="mt-10 flex justify-center space-x-10">
+            <a href="https://www.facebook.com/profile.php?id=61554915983761" class="text-gray-200 hover:text-green-600">
+                <span class="sr-only">Facebook</span>
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                          clip-rule="evenodd"/>
+                </svg>
+            </a>
+            <a href="#" class="text-gray-200 hover:text-green-600">
+                <span class="sr-only">Instagram</span>
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                          clip-rule="evenodd"/>
+                </svg>
+            </a>
+            <a href="https://twitter.com/TeamFlick43" class="text-gray-200 hover:text-green-600">
+                <span class="sr-only">Twitter</span>
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
+                </svg>
+            </a>
+            <a href="#" class="text-gray-200 hover:text-green-600">
+                <span class="sr-only">GitHub</span>
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                          clip-rule="evenodd"/>
+                </svg>
+            </a>
+            <a href="https://www.youtube.com/@TeamFlick43" class="text-gray-200 hover:text-green-600">
+                <span class="sr-only">YouTube</span>
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z"
+                          clip-rule="evenodd"/>
+                </svg>
+            </a>
+        </div>
+        <p class="mt-10 text-center text-xs leading-5 text-gray-500">&copy; 2020 Your Company, Inc.
+            All rights
+            reserved.</p>
+    </div>
+</footer>
+
+<!--FIN FOOTER SECTION-->
+</div>
+
+
+
+</body>
+</html>
