@@ -105,3 +105,38 @@
 }
 
 
+
+
+/* Secció registrar-se styles */
+
+.bg-gray-800 {
+    background-color: #2d2d2d;
+}
+
+.text-gray-300 {
+    color: #ccc;
+}
+
+.neon-button:hover {
+    transform: scale(1.05);
+}
+
+.bg-cover {
+    background-size: cover;
+}
+
+.bg-center {
+    background-position: center;
+}
+
+.bg-opacity-70 {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.text-white {
+    color: #fff;
+}
+
+
+/* Secció registrar-se styles */
+
