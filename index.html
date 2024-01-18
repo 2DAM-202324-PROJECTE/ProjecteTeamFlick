@@ -75,22 +75,22 @@
                 </button>
             </div>
             <div class="mt-6 flow-root">
-                <div class="-my-6 divide-y divide-gray-500/25">
-                    <div class="space-y-2 py-6">
-                        <a href="#Preus"
-                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Preus</a>
-                        <a href="#FAQ"
-                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Preguntes freqüents</a>
-                        <a href="#Nosaltres"
-                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Qui som?</a>
-                        <a href="#Funcionalitats"
-                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Funcionalitats</a>
-                    </div>
-                    <div class="py-6">
-                        <a href="#"
-                           class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-800">Inicia sessió
-                            </a>
-                    </div>
+                <div class="mt-6 flow-root">
+                    <div class="-my-6 divide-y divide-gray-500/25">
+                        <div class="space-y-2 py-6">
+                            <a href="#Preus" @click="menuOpen = false"
+                               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Preus</a>
+                            <a href="#FAQ" @click="menuOpen = false"
+                               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Preguntes freqüents</a>
+                            <a href="#Nosaltres" @click="menuOpen = false"
+                               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Qui som?</a>
+                            <a href="#Funcionalitats" @click="menuOpen = false"
+                               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Funcionalitats</a>
+                        </div>
+                        <div class="py-6">
+                            <a href="#" @click="menuOpen = false"
+                               class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-800">Inicia sessió</a>
+                        </div>
                 </div>
             </div>
         </div>
