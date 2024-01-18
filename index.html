@@ -13,11 +13,13 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+    <script type="module" src="/main.js"></script>
     <title>TeamFlick</title>
 </head>
 
 <body>
-<script type="module" src="/main.js"></script>
+
 <!--  HEADER-->
 
 
@@ -271,7 +273,7 @@
             </div>
 
             </p>
-            <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+
         </div>
 
 
@@ -566,22 +568,6 @@
                     </div>
                     </div>
                 </div>
-
-                <script>
-                    let currentOpenContentId = null;
-
-                    function toggleContent(elementId) {
-                        const content = document.getElementById(elementId);
-
-                        if (currentOpenContentId && currentOpenContentId !== elementId) {
-                            const currentOpenContent = document.getElementById(currentOpenContentId);
-                            currentOpenContent.classList.add('hidden');
-                        }
-
-                        content.classList.toggle('hidden');
-                        currentOpenContentId = content.classList.contains('hidden') ? null : elementId;
-                    }
-                </script>
 
 
             </main>
@@ -955,12 +941,7 @@
         </div>
 
         <!-- JavaScript per a funcionalitat d'expandir/col·lapsar -->
-        <script>
-            function toggleFAQ(faqId) {
-                var element = document.getElementById(faqId);
-                element.classList.toggle("hidden");
-            }
-        </script>
+
         <!-- FIN VISTAS RÁPIDAS DEL PRODUCTO CON SELECTOR DE COLOR Y TALLA-->
 
 
@@ -1160,5 +1141,3 @@
     </div>
   </body>
 </html>
-
-
