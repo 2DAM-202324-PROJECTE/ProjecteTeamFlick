@@ -1,0 +1,61 @@
+<!doctype html>
+<html class="scroll-smooth" lang="en" style="font-family: 'Montserrat', sans-serif" xmlns="http://www.w3.org/1999/html">
+<head>
+
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/imatges/logo35.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="style.css" rel="stylesheet">
+    <!-- Enllaç a CSS de Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/>
+    <!-- Enllaç a JavaScript de Swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <title>TeamFlick</title>
+</head>
+
+<body>
+<script type="module" src="/main.js"></script>
+
+<section class="bg-gray-900">
+    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+        <a href="index.html" class="flex items-center mb-6 text-2xl font-semibold text-gray-50 dark:text-white">
+            <img class="w-8 h-8 mr-2" src="imatges/logo.png" alt="logo">
+            Teamflick
+        </a>
+        <div class="w-full bg-blue-800 rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+            <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-50 md:text-2xl dark:text-white">
+                    Inicia sessió
+                </h1>
+                <form class="space-y-4 md:space-y-6" action="#">
+                    <div>
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-50 dark:text-white">El teu correu electrònic</label>
+                        <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-50 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="correu@electrònic.com" required="">
+                    </div>
+                    <div>
+                        <label for="password" class="block mb-2 text-sm font-medium text-gray-50 dark:text-white">Paraula de pas</label>
+                        <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-start">
+                            <div class="flex items-center h-5">
+                                <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required="">
+                            </div>
+                            <div class="ml-3 text-sm">
+                                <label for="remember" class="text-gray-50 dark:text-gray-300">Recorda'm</label>
+                            </div>
+                        </div>
+                        <a href="#" class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">He oblidat la paraula de pas</a>
+                    </div>
+                    <p class="text-sm font-light text-gray-50">
+                        Encara no tens un compte? <a href="registerForm.html" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Registra't</a>
+                    </p>
+                </form>
+                <img src="imatges/login_bg.jpeg" alt="Description of the image" class="w-full h-auto mt-auto">
+            </div>
+        </div>
+    </div>
+</section>
