@@ -88,3 +88,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // Configuració inicial del spotlight
     spotlightModule.initialize();
 });
+
+const animatedLink = document.getElementById('animacio_clicar');
+
+animatedLink.addEventListener('click', function() {
+    animatedLink.classList.add('animate-ping');
+
+
+    setTimeout(() => {
+        animatedLink.classList.remove('animate-ping');
+    }, 1000);
+});
