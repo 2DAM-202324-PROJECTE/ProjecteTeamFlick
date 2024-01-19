@@ -1,22 +1,22 @@
-import Alpine from 'alpinejs'
+import Alpine from 'alpinejs';
 
-window.Alpine = Alpine
+// Configuració inicial d'Alpine
+window.Alpine = Alpine;
+Alpine.start();
 
-Alpine.start()
+////////////////////////
+////////////////////////
 
-// function toggleFAQ(faqId) {
-//     var element = document.getElementById(faqId);
-//     element.classList.toggle("hidden");
-// }
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
+// Mòdul Spotlight
+const spotlightModule = (function () {
+    // Referències als elements de spotlight
     const spotlightDiv = document.getElementById('mySpotlightDiv');
-    const toggleButton = document.getElementById('toggleButton');
     const spotlightOverlay = document.getElementById('spotlightOverlay');
-    let isSpotlightActive = window.innerWidth > 768; // Change the threshold as needed
 
+    // Estat del spotlight (actiu o inactiu)
+    let isSpotlightActive = window.innerWidth > 768; // Canvieu el llindar segons sigui necessari
+
+    // Funció per actualitzar la posició del spotlight segons el moviment del ratolí
     function updateSpotlightPosition(e) {
         if (isSpotlightActive) {
             const rect = spotlightDiv.getBoundingClientRect();
@@ -28,42 +28,63 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // Funció per gestionar l'efecte del spotlight
     function toggleSpotlightEffects() {
-        // Toggle both spotlight effect and darkening effect
-        if (isSpotlightActive) {
-            spotlightOverlay.style.display = 'block';
-        } else {
-            spotlightOverlay.style.display = 'none';
-        }
+        // Alternar entre mostrar i ocultar l'efecte del spotlight i l'efecte d'ombratge
+        spotlightOverlay.style.display = isSpotlightActive ? 'block' : 'none';
 
-        // You can add additional logic or styles here based on the state
-        if (isSpotlightActive) {
-            spotlightDiv.classList.add('spotlight-active');
-        } else {
-            spotlightDiv.classList.remove('spotlight-active');
-        }
+        // Podeu afegir lògica o estils addicionals aquí segons l'estat
+        isSpotlightActive
+            ? spotlightDiv.classList.add('spotlight-active')
+            : spotlightDiv.classList.remove('spotlight-active');
     }
 
+    // Afegir un esdeveniment de moviment de ratolí per actualitzar la posició del spotlight
     spotlightDiv.addEventListener('mousemove', updateSpotlightPosition);
 
-    toggleButton.addEventListener('click', function () {
-        isSpotlightActive = !isSpotlightActive;
-        toggleSpotlightEffects();
-    });
+    // Funcions exposades del mòdul
+    return {
+        toggleSpotlight: function () {
+            // Alternar l'estat del spotlight i gestionar els seus efectes
+            isSpotlightActive = !isSpotlightActive;
+            toggleSpotlightEffects();
+        },
+        handleResize: function () {
+            // Gestionar el spotlight quan es redimensiona la finestra
+            isSpotlightActive = window.innerWidth > 768; // Canvieu el llindar segons sigui necessari
+            toggleSpotlightEffects();
+        },
+        initialize: function () {
+            // Configuració inicial del spotlight
+            toggleSpotlightEffects();
+        },
+    };
+})();
 
-    // Listen to window resize events to toggle the spotlight effect based on screen width
-    window.addEventListener('resize', function () {
-        isSpotlightActive = window.innerWidth > 768; // Change the threshold as needed
-        toggleSpotlightEffects();
-    });
+////////////////////////
+////////////////////////
 
-    // Initial setup
-    toggleSpotlightEffects();
-});
-
+// Funció per alternar la visibilitat d'una secció de preguntes freqüents
 function toggleFAQ(faqId) {
     var element = document.getElementById(faqId);
     element.classList.toggle("hidden");
-};
+}
 
+// Espera fins que el document estigui completament carregat abans de realitzar accions
+document.addEventListener('DOMContentLoaded', function () {
+    // Referència al botó de toogle del spotlight
+    const toggleButton = document.getElementById('toggleButton');
 
+    // Afegir un esdeveniment de clic al botó per alternar l'estat del spotlight
+    toggleButton.addEventListener('click', function () {
+        spotlightModule.toggleSpotlight();
+    });
+
+    // Escoltar esdeveniments de redimensionament de la finestra per gestionar el spotlight
+    window.addEventListener('resize', function () {
+        spotlightModule.handleResize();
+    });
+
+    // Configuració inicial del spotlight
+    spotlightModule.initialize();
+});
