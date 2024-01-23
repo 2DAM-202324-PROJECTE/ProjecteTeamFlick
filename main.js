@@ -33,12 +33,16 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 const animatedLink = document.getElementById('animacio_clicar');
+let isAnimating = false;
 
 animatedLink.addEventListener('click', function() {
-    animatedLink.classList.add('animate-ping');
+    if (!isAnimating) {
+        isAnimating = true;
+        animatedLink.classList.add('animate-ping');
 
-
-    setTimeout(() => {
-        animatedLink.classList.remove('animate-ping');
-    }, 1000);
+        setTimeout(() => {
+            animatedLink.classList.remove('animate-ping');
+            isAnimating = false;
+        }, 1000);
+    }
 });
