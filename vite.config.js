@@ -7,7 +7,7 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, 'index.html'),
                 login: resolve(__dirname, 'loginForm.html'),
-                signup: resolve(__dirname, 'register.html'),
+                signup: resolve(__dirname, 'registerForm.html'),
                 cookies: resolve(__dirname, 'PoliticaCookies.html'),
                 privacitat: resolve(__dirname, 'PoliticaPrivacitat.html'),
             },
