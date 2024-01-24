@@ -159,9 +159,13 @@
 </div>
     <div class="ml-16 mt-10 mr-12 lg:mt-16 sm:mt-48 xl:mt-0 text-center">
         <img class="m-2 p-2 bg-slate-800/50 rounded-md shadow mx-auto" src="imatges/cartellPelis.png">
-        <div x-data="{ animatePing: false }" @click.once="animatePing = true" @animationend="animatePing = false" class="bg-slate-600/50 hover:bg-slate-600/80 p-2 mt-4 rounded-lg  inline-flex cursor-pointer shadow mb-12" :class="{ 'animate-ping': animatePing }">
-            <a href="http://twitter.com" class="text-white/50 hover:text-white/80 mx-auto tracking-wider text-sm px-0.5 font-semibold">
-                Mira el nostre catàleg
+        <div class="bg-slate-600/50 hover:bg-slate-600/80 p-2 mt-4 rounded-lg inline-flex cursor-pointer shadow mb-12">
+            <a href="#pelis"
+               x-data="{ fontSizeIncreased: false }"
+               @click.once="fontSizeIncreased = true"
+               class="text-white/50 hover:text-white/80 mx-auto tracking-wider text-sm px-0.5 font-semibold"
+               :style="{ 'font-size': fontSizeIncreased ? '3em' : '1em' }">
+                Mira algunes de les nostres películ·les
             </a>
         </div>
     </div>
@@ -953,8 +957,8 @@
                                     de la configuració del teu compte.
                                 </dd>
                             </div>
-
                     </div>
+                        </dl>
                 </div>
             </div>
         </div>

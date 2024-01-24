@@ -32,17 +32,3 @@ document.addEventListener('DOMContentLoaded', function () {
     spotlightModule.initialize();
 });
 
-const animatedLink = document.getElementById('animacio_clicar');
-let isAnimating = false;
-
-animatedLink.addEventListener('click', function() {
-    if (!isAnimating) {
-        isAnimating = true;
-        animatedLink.classList.add('animate-ping');
-
-        setTimeout(() => {
-            animatedLink.classList.remove('animate-ping');
-            isAnimating = false;
-        }, 1000);
-    }
-});
