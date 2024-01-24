@@ -15,7 +15,6 @@
     <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
     <script type="module" src="/main.js"></script>
     <script type="module" src="/spotlight.js"></script>
-    <script type="module" src="/obrirPreus.js"></script>
     <title>TeamFlick</title>
 </head>
 
@@ -602,6 +601,19 @@
                     </div>
                     </div>
                 </div>
+
+                <script>
+                    let currentOpenContentId = null;
+                    function toggleContent(elementId) {
+                        const content = document.getElementById(elementId);
+                        if (currentOpenContentId && currentOpenContentId !== elementId) {
+                            const currentOpenContent = document.getElementById(currentOpenContentId);
+                            currentOpenContent.classList.add('hidden');
+                        }
+                        content.classList.toggle('hidden');
+                        currentOpenContentId = content.classList.contains('hidden') ? null : elementId;
+                    }
+                </script>
 
 
             </main>

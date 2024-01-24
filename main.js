@@ -1,5 +1,6 @@
 import Alpine from 'alpinejs';
 import spotlightModule from './spotlight';
+import toggleContent from './obrirPreus';
 
 // Configuració inicial d'Alpine
 window.Alpine = Alpine;
