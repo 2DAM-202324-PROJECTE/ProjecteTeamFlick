@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "alpinejs": "^3.13.3",
+    "swiper": "^11.0.5",
     "tw-elements": "^1.1.0"
   }
 }
