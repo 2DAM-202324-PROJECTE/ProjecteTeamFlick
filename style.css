@@ -132,3 +132,6 @@
     color: #fff;
 }
 
+.animate-ping {
+    animation-iteration-count: 1;
+}
