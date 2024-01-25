@@ -15,13 +15,13 @@
     <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
     <script type="module" src="/main.js"></script>
     <script type="module" src="/spotlight.js"></script>
-    <script src="//unpkg.com/alpinejs@3" defer></script>
+
     <title>TeamFlick</title>
 </head>
 
 <body>
 
-<!--  HEADER-->
+                                        <!--      HEADER       -->
 
 
 <header class="bg-gradient-to-t from-gray-900 from-10% via-blue-450 via-50% to-blue-500 to-50% pb-6"
@@ -50,8 +50,13 @@
             <a href="#Nosaltres" class="text-xs font-semibold leading-6 text-white hover:underline" style="font-family: 'Montserrat', sans-serif">Qui som?</a>
             <a href="#Funcionalitats" class="text-xs font-semibold leading-6 text-white hover:underline" style="font-family: 'Montserrat', sans-serif">Funcionalitats</a>
         </div>
-        <div class="hidden lg:flex lg:flex-2 lg:justify-end border border-white/40 ml-32 px-2 mx-auto rounded-full bg-white/40 mb-2">
+        <div class="hidden lg:flex lg:flex-2 lg:justify-end border border-white/40 ml-8 px-2 mx-auto rounded-full bg-white/40 mb-2">
+
             <a href="loginForm.html" target="_blank" class=" text-xs font-semibold leading-6 text-white mx-auto" style="font-family: 'Montserrat', sans-serif">Inicia sessió
+                <span class="p-2 " aria-hidden="true">&rarr;</span></a>
+        </div>
+        <div class="hidden lg:flex lg:flex-2 lg:justify-end border border-white/40 ml-8 px-2 mx-auto rounded-full bg-white/40 mb-2">
+            <a href="registerForm.html" target="_blank" class=" text-xs font-semibold leading-6 text-white mx-auto" style="font-family: 'Montserrat', sans-serif">Registra't ara
                 <span class="p-2 " aria-hidden="true">&rarr;</span></a>
         </div>
     </nav>
@@ -90,6 +95,8 @@
                     <div class="py-6">
                         <a href="loginForm.html" @click="menuOpen = false"
                            class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-800">Inicia sessió</a>
+                        <a href="registerForm.html" @click="menuOpen = false"
+                           class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-800">Registra't ara</a>
                     </div>
                 </div>
             </div>
@@ -97,7 +104,7 @@
     </div>
 </header>
 
-<!--      FIN HEARDER       -->
+
 
 
 <!--      NEWSLETTER       -->
@@ -1116,7 +1123,7 @@
                             <a href="Accesibilitat.html" target="_blank" class="text-sm leading-6 text-white hover:text-green-600">Accesibilitat</a>
                         </div>
                         <div class="pb-6">
-                            <a href="Contacte.html" target="_blank" class="text-sm leading-6 text-white hover:text-green-600">Contacte</a>
+                            <a href="#Nosaltres" target="_blank" class="text-sm leading-6 text-white hover:text-green-600">Contacte</a>
                         </div>
                     </div>
                 </nav>
