@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en" style="font-family: 'Montserrat', sans-serif" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="imatges/logo33.png"/>
+    <link href="style.css" rel="stylesheet">
+    <script type="module" src="/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <title>Compatibiltat multiplataforma</title>
+</head>
+
+<body class="bg-gray-900">
+
+<!-- Header -->
+<header class="bg-gradient-to-t from-gray-900 from-10% via-blue-450 via-50% to-blue-500 to-50% pb-6"
+        x-data="{menuOpen: false}">
+    <nav class="mx-auto flex max-w-10xl items-center justify-between pt-1.5 lg:px-8  " aria-label="Global">
+        <div class="flex lg:flex-2">
+            <a href="index.html" class="-m-.5 p-.5">
+                <span class="sr-only">TeamFlick</span>
+                <img class="h-20 w-auto pl-4" src="imatges/logo33.png" alt="">
+            </a>
+        </div>
+        <div class="flex lg:hidden ">
+            <button @click="menuOpen=true" type="button"
+                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400">
+                <span class="sr-only">Open main menu</span>
+                <svg class="h-6 w-6 m-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                     aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                </svg>
+            </button>
+        </div>
+        <div class="hidden lg:flex flex-auto justify-center lg:gap-x-28 ">
+            <a href="#Preus" class="text-xs font-semibold leading-6 text-white hover:underline" style="font-family: 'Montserrat', sans-serif">Preus</a>
+            <a href="#FAQ" class="text-xs font-semibold leading-6 text-white hover:underline" style="font-family: 'Montserrat', sans-serif">Preguntes freqüents</a>
+            <a href="#Nosaltres" class="text-xs font-semibold leading-6 text-white hover:underline" style="font-family: 'Montserrat', sans-serif">Qui som?</a>
+            <a href="#Funcionalitats" class="text-xs font-semibold leading-6 text-white hover:underline" style="font-family: 'Montserrat', sans-serif">Funcionalitats</a>
+        </div>
+        <div class="hidden lg:flex lg:flex-2 lg:justify-end border border-white/40 ml-8 px-2 mx-auto rounded-full bg-white/40 mb-2">
+
+            <a href="loginForm.html" target="_blank" class=" text-xs font-semibold leading-6 text-white mx-auto" style="font-family: 'Montserrat', sans-serif">Inicia sessió
+                <span class="p-2 " aria-hidden="true">&rarr;</span></a>
+        </div>
+        <div class="hidden lg:flex lg:flex-2 lg:justify-end border border-white/40 ml-8 px-2 mx-auto rounded-full bg-white/40 mb-2">
+            <a href="registerForm.html" target="_blank" class=" text-xs font-semibold leading-6 text-white mx-auto" style="font-family: 'Montserrat', sans-serif">Registra't ara
+                <span class="p-2 " aria-hidden="true">&rarr;</span></a>
+        </div>
+    </nav>
+    <!-- Mobile menu, show/hide based on menu open state. -->
+    <div x-show="menuOpen" class="lg:hidden" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-10 "></div>
+        <div class="fixed inset-y-0 right-0 z-10 w-full bg-gradient-to-t from-gray-900 via-gray-900 50%, blue-450 50% to-blue-500 overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
+
+
+            <div class="flex items-center justify-between">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">TeamFlick</span>
+                    <img class="h-20 w-auto  " src="imatges/logo33.png" alt="">
+                </a>
+                <button @click="menuOpen=false" type="button" class="-m-2.5 rounded-md p-2.5  ">
+                    <span class="sr-only">Close menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                         aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-gray-500/25">
+                    <div class="space-y-2 py-6">
+                        <a href="#Preus" @click="menuOpen = false"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Preus</a>
+                        <a href="#FAQ" @click="menuOpen = false"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Preguntes freqüents</a>
+                        <a href="#Nosaltres" @click="menuOpen = false"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Qui som?</a>
+                        <a href="#Funcionalitats" @click="menuOpen = false"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Funcionalitats</a>
+                    </div>
+                    <div class="py-6">
+                        <a href="loginForm.html" @click="menuOpen = false"
+                           class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-800">Inicia sessió</a>
+                        <a href="registerForm.html" @click="menuOpen = false"
+                           class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-800">Registra't ara</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Fi Header -->
+<div class="border-t my-4 border-gray-500/50 mx-2 border-0.5"></div>
+
+    <div class="grid justify-items-start mx-12 xl:mx-12 mt-12 2xl:mx-auto max-w-[1600px]">
+        <h1 class="text-blue-500 font-semibold">COMPATIBILITAT MULTIPLATAFORMA</h1>
+            <p class="mt-10 text-gray-400 text-sm">
+                TeamFlick és accessible des de diversos dispositius, ja sigui des de l'ordinador, la tauleta o el mòbil, permetent als usuaris gaudir de "watch parties" des de qualsevol lloc. <br>
+                Et pots divertir amb TeamFlick estiguis on estiguis gràcies a que ho pots veure desde qualsevol dispositiu. <br>
+                Hem utilitzat les tecnologies més avançades per a que puguis gaudir de la teva pel·lícula o sèrie preferida des de qualsevol lloc.
+            </p>
+        <div class="grid md:grid-cols-3 grid-rows-3 mt-16 gap-x-20 mx-auto xl:mx-64">
+            <div class="flex justify-center items-center">
+                <img src="imatges/mobil2.png" class="w-48 h-48" alt="">
+            </div>
+            <div class="flex justify-center items-center">
+                <img src="imatges/pc.png" class="w-48 h-48" alt="">
+            </div>
+            <div class="flex justify-center items-center">
+                <img src="imatges/tablet2.png" class="w-60 h-60" alt="">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
