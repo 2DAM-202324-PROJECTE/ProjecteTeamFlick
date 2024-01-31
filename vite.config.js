@@ -11,10 +11,11 @@ export default defineConfig({
                 cookies: resolve(__dirname, 'Politica_cookies.html'),
                 privacitat: resolve(__dirname, 'Politica_privacitat.html'),
                 continguts: resolve(__dirname, 'biblioteca_continguts.html'),
-                multiplataforma: resolve(__dirname, 'compatibilitat_multiplataforma.html'),
+                multiplataforma: resolve(__dirname, 'compatibilitat_multiplaforma.html'),
                 interaccio: resolve(__dirname, 'interaccio_temps.html'),
                 interficie: resolve(__dirname, 'interficie_friendly.html'),
             },
         },
     },
 })
+
