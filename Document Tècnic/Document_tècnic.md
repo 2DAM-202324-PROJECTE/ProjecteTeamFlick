@@ -104,15 +104,109 @@
   </ol>
 </div>
 
+***  <!-- o ___ -->
+
+
 <div style="background-color: #f2f2f2; padding: 20px; text-align: center;">
-  <h2 style="color: black; padding-bottom: 30px;">1. Tecnologíes utilitzades</h2>
+<h2 style="color: black; padding-bottom: 30px;">1. Tecnologíes utilitzades</h2>
+
+<h3 style="color: black; padding-bottom: 15px;">Llenguatges de programació i frameworks:</h3>
+
+<h4 style="color: black; padding-bottom: 10px;">HTML:</h4>
+<p style="color: black; text-align: left;">
+    S'utilitza per a construir l'estructura bàsica de la pàgina web i organitzar el contingut en seccions, headers, links, etc.
+</p>
+
+<h4 style="color: black; padding-bottom: 10px;">CSS:</h4>
+<p style="color: black; text-align: left;">
+    S'aplica per personalitzar l'aparença visual de la pàgina, incloent colors, mides, espaiat, i altres propietats d'estil. Es fa servir juntament amb Tailwind CSS, que és un framework CSS basat en classes d'utilitat per a disseny ràpid i responsive.
+</p>
+
+<h4 style="color: black; padding-bottom: 10px;">JavaScript:</h4>
+<p style="color: black; text-align: left;">
+    Aporta dinamisme i interactivitat al lloc web. Es fa servir per controlar comportaments dinàmics com els carrousels de pel·lícules, animacions, menús desplegables, i la lògica d'interacció amb l'usuari.
+</p>
+
+<h3 style="color: black; padding-bottom: 15px;">Frameworks i Biblioteques:</h3>
+
+<h4 style="color: black; padding-bottom: 10px;">Tailwind CSS:</h4>
+<p style="color: black; text-align: left;">
+    Es tracta d'un framework CSS que utilitza classes d'utilitat per a un disseny més ràpid i eficient, permetent als desenvolupadors estilizar la seva pàgina sense sortir de l'HTML.
+</p>
+
+<h4 style="color: black; padding-bottom: 10px;">Swiper:</h4>
+<p style="color: black; text-align: left;">
+    Aquesta és una biblioteca de JavaScript potent i moderna utilitzada per crear carrousels interactius i sensibles al tacte.
+</p>
+
+<h4 style="color: black; padding-bottom: 10px;">Alpine.js:</h4>
+<p style="color: black; text-align: left;">
+    És un framework minimalista per a JavaScript que ofereix la reactivitat i la declarativitat necessàries per al disseny d'interfícies d'usuari dinàmiques amb una petita petjada.
+</p>
+
+<h4 style="color: black; padding-bottom: 10px;">Flowbite:</h4>
+<p style="color: black; text-align: left;">
+    Aquesta biblioteca ofereix components i interaccions basats en Tailwind CSS, facilitant la creació d'elements UI interactius com diàlegs, dropdowns, etc.
+</p>
+
+<h3 style="color: black; padding-bottom: 15px;">Altres Eines i Tecnologies:</h3>
+
+<h4 style="color: black; padding-bottom: 10px;">Fonts de Google:</h4>
+<p style="color: black; text-align: left;">
+    S'utilitzen fonts personalitzades carregades des de Google Fonts per a millorar l'estètica del text en la pàgina web.
+</p>
+
+<h4 style="color: black; padding-bottom: 10px;">Imatges SVG:</h4>
+<p style="color: black; text-align: left;">
+    Les imatges SVG són utilitzades per a icons i altres elements gràfics, proporcionant gràfics escalables i lleugers.
+</p>
+
+<h4 style="color: black; padding-bottom: 10px;">Polítiques de Cookies i Privacitat:</h4>
+<p style="color: black; text-align: left;">
+    S'inclouen vincles a les polítiques de cookies i privacitat, indicant que el lloc web segueix les pràctiques estàndard per a la gestió de la informació de l'usuari.
+</p>
+
+<h4 style="color: black; padding-bottom: 10px;">Xarxes Socials:</h4>
+<p style="color: black; text-align: left;">
+    Hi ha enllaços a les plataformes de xarxes socials com Facebook, Instagram, Twitter i YouTube, permetent la promoció i compartició del contingut del lloc web a través d'aquests canals.
+</p>
+
+<h4 style="color: black; padding-bottom: 10px;">SEO:</h4>
+<p style="color: black; text-align: left;">
+    L'ús de metadades adequades i la semàntica HTML ajuden a optimitzar la pàgina web per als motors de cerca, millorant la visibilitat en línia.
+</p>
+
+
+<h3 style="color: black; padding-bottom: 15px;">Eines de Desenvolupament i Plataformes:</h3>
+
+<h4 style="color: black; padding-bottom: 10px;">GitHub:</h4>
+<p style="color: black; text-align: left;">
+<strong>Descripció:</strong> GitHub és una plataforma de desenvolupament col·laboratiu que es basa en el sistema de control de versions Git. Proporciona un entorn central per al seguiment de canvis en el codi font d'un projecte i permet als desenvolupadors col·laborar de manera eficient. GitHub ofereix funcionalitats avançades com ara seguiment d'errors (issues), integració continua, i allotjament de pàgines web directament des de repositoris.
+<br><strong>Ús Comú:</strong> GitHub és àmpliament utilitzat per a la col·laboració en projectes de codi obert i desenvolupament de software. Els desenvolupadors poden clonar (copiar) els repositoris, realitzar canvis en el codi, i enviar "pull requests" per integrar els seus canvis al projecte principal. També ofereix eines per gestionar tasques, informar d'errors i facilitar la comunicació entre els membres del projecte.
+</p>
+<img src="imatges/GitHub-logo.png" alt="Teamflick Logo" width="200"/>
+
+<h4 style="color: black; padding-bottom: 10px;">StormPHP:</h4>
+<p style="color: black; text-align: left;">
+<strong>Descripció:</strong> StormPHP és un framework PHP que està dissenyat per simplificar el desenvolupament web. Es destaca per ser lleuger i flexible, oferint una estructura modular que permet als desenvolupadors crear aplicacions web eficients. Proporciona suport a bases de dades, gestió de rutes, i una sintaxi clara que facilita la creació d'aplicacions PHP escalables.
+<br><strong>Ús Comú:</strong> StormPHP és utilitzat principalment per al desenvolupament web, especialment per a la creació d'aplicacions PHP. La seva estructura modular permet als desenvolupadors organitzar el codi de manera eficient, facilitant el manteniment i l'escalabilitat de les aplicacions. També ofereix eines i funcionalitats per gestionar bases de dades i rutes d'aplicacions web.
+</p>
+<img src="imatges/PhpStorm_Icon.png" alt="Teamflick Logo" width="150"/>
+
+
+<h4 style="color: black; padding-bottom: 10px;">Eines de Desenvolupament:</h4>
+<p style="color: black; text-align: left;">
+<strong>Control de Versions (Git):</strong>
+<br><strong>Git:</strong> És un sistema de control de versions distribuït. Aquest sistema permet el seguiment dels canvis en el codi font d'un projecte. Els desenvolupadors poden clonar repositoris, crear branques per desenvolupar funcionalitats noves i fusionar-les després. Git facilita la col·laboració entre diversos membres d'un equip de desenvolupament.
+</p>
+
+
 </div>
 
 
 ***  <!-- o ___ -->
 
 <div style="background-color: #f2f2f2; padding: 20px; text-align: center;">
-
 <h2 style="color: black; padding-bottom: 30px;">2. Arquitectura del sistema</h2>
 
 <h3 style="color: black; padding-bottom: 15px;">Client (Navegador o Aplicació Mòbil):</h3>
